@@ -1,0 +1,42 @@
+// Colours
+
+$DT-black: #1A1919;
+$DT-dark-grey: #858383;
+$DT-light-grey: #F5F5F5;
+$DT-white: #FBFAF9;
+$DT-primary-light: #FDF1E8;
+$DT-primary: #F5DFCF;
+$DT-primary-dark: #EFAE80;
+$DT-accent-light: #FFC0B4;
+$DT-accent: #F18C79;
+$DT-accent-dark: #97301C;
+$DT-bckgrd: linear-gradient(180deg, rgba(245, 223, 207, 0.47) 0%, #FBFAF9 100%), #FBFAF9;
+
+
+// Responsive
+
+$mobile: 700px;
+
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin desktop {
+  @media screen and (min-width: ($mobile + 1)) {
+    @supports (grid-area: auto) {
+      @content;
+    }
+  }
+}
+
+// Other
+
+@mixin shadow {
+  box-shadow: 0px 0px 16px rgba(133, 131, 131, 0.3);
+}
+
+@mixin border-rad {
+  border-radius: 9px;
+}

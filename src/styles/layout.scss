@@ -1,0 +1,225 @@
+@import "variables";
+@import "resets";
+
+@import "~@fontsource/lato/index.css";
+@import "~@fontsource/lato/300.css";
+@import "~@fontsource/cormorant-garamond/600.css";
+@import "~@fontsource/cormorant-garamond/500-italic.css";
+
+
+body {
+  color: $DT-black;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 160%;
+  background: $DT-bckgrd;
+  background-size: 100vw 100vh, auto auto;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: $DT-black;
+  transition: all 0.3s ease-in-out;
+
+  &:visited {
+    color: $DT-black;
+  }
+  &:hover, &:focus, &:active {
+    color: $DT-accent;
+  }
+}
+
+.text-link {
+  font-weight: normal;
+  text-decoration: underline;
+  color: $DT-accent-dark;
+
+  &:visited {
+    color: $DT-accent-dark;
+  }  
+  &:hover, &:focus {
+    outline-width: 0;
+    color: $DT-accent;
+  }
+  &:active {
+    color: $DT-accent-light;
+  }
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8.091vw;
+  line-height: 120%;
+
+  @include mobile {
+    font-size: 3.375em;
+  }
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2.618em;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 1.5em;
+  }
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.618em;
+  line-height: 140%;
+
+  @include mobile {
+    font-size: 2.25em;
+  }
+}
+
+h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.618em;
+  line-height: 150%;
+
+  @include mobile {
+    font-size: 1.5em;
+  }
+}
+
+h5, h6 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 160%;
+}
+
+button,
+.btn {
+  display: inline-block;
+  width: 11.25em;
+  padding: 0.5em;
+  border-radius: 2.56em;
+  cursor: pointer;
+  background-color: $DT-accent;
+  font-size: 100%;
+  font-family: inherit;
+  font-weight: normal;
+  text-align: center;
+  border: none;
+  transition: all 0.3s ease-in-out;
+
+  @include mobile {
+    width: 10.2em;
+  }
+
+  &:visited {
+    color: $DT-black;
+  }
+
+  &:hover, &:focus {
+    color: $DT-black;
+    background-color: $DT-accent-light;
+  }
+  &:active {
+    color: $DT-black;
+    background-color: $DT-accent-dark;
+    transform: scale(0.97);
+  }
+}
+
+header, section {
+  padding-top: 6em;
+  display: grid;
+  grid-template-columns: 15vw repeat(12, 1fr) 15vw;
+
+  @include mobile {
+    padding-top: 4em;
+    grid-template-columns: 30px 1fr 30px;
+  }
+}
+
+section {
+  padding-bottom: 10em;
+
+  @include mobile {
+    padding-bottom: 6em;
+  }
+}
+
+.stack-tag {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  padding: 0.1em 0.7em 0.15em 0.7em;
+  background-color: $DT-primary;
+  @include border-rad;
+}
+
+footer {
+  position: relative;
+  background-color: $DT-primary;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  small {
+    position: absolute;
+    bottom: 3.2em;
+  }
+}
+
+.footer-h3 {
+  margin: 0 0 0.5em 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.618em;
+  line-height: 140%;  
+
+  @include mobile {
+    font-size: 2.25em;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+
+  .footer-left,
+  .footer-right {
+    flex: 0 1 260px;
+  }
+
+  .footer-line {
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid $DT-black;
+    margin: 0 8.82em;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+}
+

@@ -1,0 +1,144 @@
+@import "variables";
+
+.page-container {
+
+  .text-link .icon {
+    vertical-align: middle;
+  }
+
+  section {
+    padding-bottom: 6em;
+  }
+
+  header {
+    nav,
+    .num-header, 
+    h1 {
+      grid-column: 2/14;
+      text-align: left;
+    }
+    
+    nav {
+      grid-row: 1/2;
+      margin-bottom: 7.5em;
+
+      .icon {
+        margin-right: 1.5em;
+      }
+    }
+  
+    .num-header {
+      grid-row: 2/3;
+      margin-bottom: 0.5em;
+    }
+  
+    h1 {
+      grid-row: 3/4;
+      margin: 0;
+    }
+  }
+
+  .project-descr {
+    padding-top: 3em;
+
+    & > * {
+      margin-bottom: 3.5em;
+    }
+
+    p {
+      grid-row: 1/2;
+      grid-column: 2/10;
+    }
+
+    .column {
+      grid-row: 2/3;
+
+      &:nth-of-type(1) {
+        grid-column: 2/5;
+      }
+
+      &:nth-of-type(2) {
+        grid-column: 5/9;
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+
+      &:nth-of-type(3) {
+        grid-column: 9/12;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
+
+    .hero-image {
+      grid-row: 3/4;
+      grid-column: 3/13;
+      margin: 4.4em auto 0 auto;
+      @include shadow;
+    }
+  }
+
+  .project-details {
+    padding-top: 0;
+
+    article {
+      grid-column: 2/14;
+    }
+
+    h3 {
+      margin-top: 1.7em;
+      margin-bottom: 1em;
+    }
+  }
+   
+  .screenshot-container {
+    background: $DT-light-grey;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .prev-next {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10em;
+
+    @include mobile {
+      padding-bottom: 6em;
+    }
+
+    .text-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.618em;
+      line-height: 150%;
+    
+      @include mobile {
+        font-size: 1.5em;
+      }
+    }
+
+    .next {
+      margin-left: 3em;
+      justify-self: flex-end;
+
+      .icon {
+        margin-left: 1.5em;
+      }
+    }
+
+    .prev {
+      margin-right: 3em;
+      justify-self: flex-start;
+
+      .icon {
+        margin-right: 1.5em;
+        width: 29px;
+      }
+    }
+  }
+}
