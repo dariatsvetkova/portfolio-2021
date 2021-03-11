@@ -2,10 +2,6 @@
 
 .page-container {
 
-  .text-link .icon {
-    vertical-align: middle;
-  }
-
   section {
     padding-bottom: 6em;
   }
@@ -14,13 +10,23 @@
     nav,
     .num-header, 
     h1 {
-      grid-column: 2/14;
       text-align: left;
+
+      @include grid {
+        grid-column: 2/14;
+      }
     }
     
     nav {
-      grid-row: 1/2;
       margin-bottom: 7.5em;
+
+      @include mobile {
+        margin-bottom: 4em;
+      }
+      
+      @include grid {
+        grid-row: 1/2;
+      }
 
       .icon {
         margin-right: 1.5em;
@@ -28,13 +34,19 @@
     }
   
     .num-header {
-      grid-row: 2/3;
       margin-bottom: 0.5em;
+
+      @include grid {
+        grid-row: 2/3;
+      }
     }
   
     h1 {
-      grid-row: 3/4;
       margin: 0;
+
+      @include grid {
+        grid-row: 3/4;
+      }
     }
   }
 
@@ -43,28 +55,36 @@
 
     & > * {
       margin-bottom: 3.5em;
+
+      @include mobile {
+        margin-bottom: 2.2em;
+      }
     }
 
     p {
-      grid-row: 1/2;
-      grid-column: 2/10;
+      @include grid {
+        grid-row: 1/2;
+        grid-column: 2/10;
+      }
     }
 
     .column {
-      grid-row: 2/3;
+      @include grid {
+        grid-row: 2/3;
 
-      &:nth-of-type(1) {
-        grid-column: 2/5;
-      }
-
-      &:nth-of-type(2) {
-        grid-column: 5/9;
-        margin-left: 2em;
-        margin-right: 2em;
-      }
-
-      &:nth-of-type(3) {
-        grid-column: 9/12;
+        &:nth-of-type(1) {
+          grid-column: 2/5;
+        }
+  
+        &:nth-of-type(2) {
+          grid-column: 5/9;
+          margin-left: 2em;
+          margin-right: 2em;
+        }
+  
+        &:nth-of-type(3) {
+          grid-column: 9/12;
+        }  
       }
 
       p {
@@ -73,10 +93,13 @@
     }
 
     .hero-image {
-      grid-row: 3/4;
-      grid-column: 3/13;
       margin: 4.4em auto 0 auto;
       @include shadow;
+
+      @include grid {
+        grid-row: 3/4;
+        grid-column: 3/13;
+      }
     }
   }
 
@@ -84,7 +107,9 @@
     padding-top: 0;
 
     article {
-      grid-column: 2/14;
+      @include grid {
+        grid-column: 2/14;
+      }
     }
 
     h3 {
@@ -140,5 +165,11 @@
         width: 29px;
       }
     }
+  }
+}
+
+.tap-tempo {
+  .project-descr {
+    padding-bottom: 1em;
   }
 }

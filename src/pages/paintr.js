@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import "../styles/project.scss"
+import "../styles/page.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
@@ -22,7 +22,7 @@ const Paintr = () => (
 
       <main>
         <section className="project-descr">
-          <p>A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.</p>
+          <p>Paintr is a web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.</p>
           <div className="column">
             <h5>My role</h5>
             <p>Idea, design and development</p>

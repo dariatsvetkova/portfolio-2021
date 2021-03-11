@@ -5,13 +5,34 @@ import { AiFillTwitterCircle, AiFillLinkedin, AiOutlineGithub } from "react-icon
 const Social = (props) => (
   <ul className={`social-icons ${props.classes || ""}`}>
     <li>
-      <a href="https://twitter.com/daria_tsss" target="_blank" rel="noreferrer"><AiFillTwitterCircle /></a>
+      <a 
+        aria-label="Twitter"
+        href="https://twitter.com/daria_tsss"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AiFillTwitterCircle />
+      </a>
     </li>
     <li>
-      <a href="https://www.linkedin.com/in/daria-tsvetkova/" target="_blank" rel="noreferrer"><AiFillLinkedin /></a>
+      <a
+        aria-label="LinkedIn"
+        href="https://www.linkedin.com/in/daria-tsvetkova/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AiFillLinkedin />
+      </a>
     </li>
     <li>
-      <a href="https://github.com/dariatsvetkova/" target="_blank" rel="noreferrer"><AiOutlineGithub /></a>
+      <a 
+        aria-label="GitHub"
+        href="https://github.com/dariatsvetkova/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AiOutlineGithub />
+      </a>
     </li>
   </ul>
 )

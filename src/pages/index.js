@@ -19,9 +19,9 @@ const IndexPage = () => (
           <Social classes="social-icons-vertical"/>
         </nav>
         <h2>
-          <span>// front-end developer</span>
-          <span>// musician</span>
-          <span>// creative thinker</span>
+          <span>&#47;&#47; front-end developer</span>
+          <span>&#47;&#47; musician</span>
+          <span>&#47;&#47; creative thinker</span>
         </h2>
         <StaticImage
           className="hero-image"
@@ -33,9 +33,11 @@ const IndexPage = () => (
           alt="Daria Tsvetkova, web developer and musician from Toronto"
           style={{ marginBottom: `1.45rem` }}
         />
-        <a className="btn" href="/#projects">
-            See my projects
-        </a>
+        <p className="btn-container">
+          <a className="btn" href="/#projects">
+              See my projects
+          </a>
+        </p>
       </header>
 
       <main>
@@ -84,13 +86,6 @@ const IndexPage = () => (
               <Link to="/paintr/" className="project-container">
                 <small className="num-card">01</small>
                 <h4>Paintr</h4>
-                <p className="descr">A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.</p>
-                <div className="stack-tags">
-                  <span className="stack-tag">React</span>
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">CSS</span>
-                </div>
                 <StaticImage
                   className="project-img"
                   src="../images/paintr-home.png"
@@ -100,6 +95,13 @@ const IndexPage = () => (
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Paintr web app screenshot"
                 />
+                <p className="descr">A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme. <span className="text-link">Learn more</span></p>
+                <div className="stack-tags">
+                  <span className="stack-tag">React</span>
+                  <span className="stack-tag">JavaScript</span>
+                  <span className="stack-tag">HTML</span>
+                  <span className="stack-tag">CSS</span>
+                </div>
               </Link>
             </li>
 
@@ -107,12 +109,6 @@ const IndexPage = () => (
               <Link to="/game-of-15/" className="project-container">
                 <small className="num-card">02</small>
                 <h4>Game of Fifteen</h4>
-                <p>Classic 15 puzzle with modern neomorphic design, a dark mode, and multiple interaction methods that resemble the physical puzzle.</p>
-                <div className="stack-tags">
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">Scss</span>
-                </div>
                 <StaticImage
                   className="project-img"
                   src="../images/gameof15-home.png"
@@ -122,6 +118,12 @@ const IndexPage = () => (
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Online Game of Fifteen screenshot"
                 />
+                <p>Classic 15 puzzle with modern neomorphic design, a dark mode, and multiple interaction methods that resemble the physical puzzle. <span className="text-link">Learn more</span></p>
+                <div className="stack-tags">
+                  <span className="stack-tag">JavaScript</span>
+                  <span className="stack-tag">HTML</span>
+                  <span className="stack-tag">Scss</span>
+                </div>
               </Link>
             </li>
 
@@ -129,13 +131,6 @@ const IndexPage = () => (
               <Link to="/clap-card/" className="project-container">
                 <small className="num-card">03</small>
                 <h4>Clap Card</h4>
-                <p>An interactive online birthday card that activates when a user claps their hands.</p>
-                <div className="stack-tags">
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">CSS</span>
-                  <span className="stack-tag">Web Audio API</span>
-                </div>
                 <div className="project-img">
                   <img 
                     src={clapCard} 
@@ -146,6 +141,13 @@ const IndexPage = () => (
                     }}
                   />
                 </div>
+                <p>An interactive online birthday card that activates when a user claps their hands. <span className="text-link">Learn more</span></p>
+                <div className="stack-tags">
+                  <span className="stack-tag">JavaScript</span>
+                  <span className="stack-tag">HTML</span>
+                  <span className="stack-tag">CSS</span>
+                  <span className="stack-tag">Web Audio API</span>
+                </div>
               </Link>
             </li>
 
@@ -153,14 +155,6 @@ const IndexPage = () => (
               <Link to="/tap-tempo/" className="project-container">
                 <small className="num-card">04</small>
                 <h4>Tap Tempo</h4>
-                <p>A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month.</p>
-                <div className="stack-tags">
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">jQuery</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">CSS</span>
-                  <span className="stack-tag">SVG graphics</span>
-                </div>
                 <StaticImage
                   className="project-img"
                   src="../images/taptempo-home.png"
@@ -170,6 +164,14 @@ const IndexPage = () => (
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Tap Tempo website screenshot"
                 />
+                <p>A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month. <span className="text-link">Learn more</span></p>
+                <div className="stack-tags">
+                  <span className="stack-tag">JavaScript</span>
+                  <span className="stack-tag">jQuery</span>
+                  <span className="stack-tag">HTML</span>
+                  <span className="stack-tag">CSS</span>
+                  <span className="stack-tag">SVG graphics</span>
+                </div>
               </Link>
             </li>
           </ul>

@@ -15,21 +15,29 @@ $DT-bckgrd: linear-gradient(180deg, rgba(245, 223, 207, 0.47) 0%, #FBFAF9 100%),
 
 // Responsive
 
+$tablet: 1050px;
 $mobile: 700px;
 
-@mixin mobile {
-    @media screen and (max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin desktop {
+@mixin grid {
   @media screen and (min-width: ($mobile + 1)) {
     @supports (grid-area: auto) {
       @content;
     }
   }
 }
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+      @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+      @content;
+  }
+}
+
 
 // Other
 

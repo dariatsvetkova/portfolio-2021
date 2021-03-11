@@ -37,23 +37,6 @@ a {
   }
 }
 
-.text-link {
-  font-weight: normal;
-  text-decoration: underline;
-  color: $DT-accent-dark;
-
-  &:visited {
-    color: $DT-accent-dark;
-  }  
-  &:hover, &:focus {
-    outline-width: 0;
-    color: $DT-accent;
-  }
-  &:active {
-    color: $DT-accent-light;
-  }
-}
-
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-style: normal;
@@ -62,7 +45,7 @@ h1 {
   line-height: 120%;
 
   @include mobile {
-    font-size: 3.375em;
+    font-size: 15vw;
   }
 }
 
@@ -110,8 +93,7 @@ h5, h6 {
   line-height: 160%;
 }
 
-button,
-.btn {
+button {
   display: inline-block;
   width: 11.25em;
   padding: 0.5em;
@@ -146,12 +128,20 @@ button,
 
 header, section {
   padding-top: 6em;
-  display: grid;
-  grid-template-columns: 15vw repeat(12, 1fr) 15vw;
+  padding-left: 3em;
+  padding-right: 3em;
+
+  @include grid {
+    display: grid;
+    grid-template-columns: 15vw repeat(12, 1fr) 15vw;
+    padding-left: 0;
+    padding-right: 0;  
+  }
 
   @include mobile {
     padding-top: 4em;
-    grid-template-columns: 30px 1fr 30px;
+    padding-left: 2.14em;
+    padding-right: 2.14em;
   }
 }
 
@@ -163,26 +153,29 @@ section {
   }
 }
 
-.stack-tag {
-  display: inline-block;
-  margin: 0 1em 1em 0;
-  padding: 0.1em 0.7em 0.15em 0.7em;
-  background-color: $DT-primary;
-  @include border-rad;
-}
-
 footer {
   position: relative;
   background-color: $DT-primary;
   height: 100vh;
+  padding: 3em;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
 
+  @include mobile {
+    padding: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   small {
     position: absolute;
     bottom: 3.2em;
+
+    @include mobile {
+      position: static;
+    } 
   }
 }
 
@@ -205,9 +198,21 @@ footer {
   justify-content: center;
   align-items: stretch;
 
+  @include mobile {
+    justify-content: flex-start;
+  }
+
   .footer-left,
   .footer-right {
     flex: 0 1 260px;
+  }
+
+  .footer-left {
+    @include mobile {
+      p:last-of-type {
+        margin-bottom: 1em;
+      }
+    }
   }
 
   .footer-line {
@@ -220,6 +225,42 @@ footer {
       display: none;
     }
   }
+}
 
+
+/* --- Global classes --- */
+
+.text-link {
+  font-weight: normal;
+  text-decoration: underline;
+  color: $DT-accent-dark;
+
+  &:visited {
+    color: $DT-accent-dark;
+  }  
+  &:hover, &:focus {
+    outline-width: 0;
+    color: $DT-accent;
+  }
+  &:active {
+    color: $DT-accent-light;
+  }
+}
+
+.text-link .icon {
+  vertical-align: middle;
+}
+
+.btn {
+  @extend button;
+  display: inline-block;
+}
+
+.stack-tag {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  padding: 0.1em 0.7em 0.15em 0.7em;
+  background-color: $DT-primary;
+  @include border-rad;
 }
 
