@@ -17,6 +17,7 @@
 
   &-vertical {
     @include mobile {
+      height: 27vw;
       flex-direction: column;
       justify-content: space-between;
 

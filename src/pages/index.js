@@ -26,12 +26,12 @@ const IndexPage = () => (
         <StaticImage
           className="hero-image"
           src="../images/daria-tsvetkova.png"
+          loading="eager"
           placeholder="blurred"
-          width={500}
-          quality={95}
+          quality={100}
+          objectFit="contain"
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Daria Tsvetkova, web developer and musician from Toronto"
-          style={{ marginBottom: `1.45rem` }}
         />
         <p className="btn-container">
           <a className="btn" href="/#projects">
@@ -90,7 +90,7 @@ const IndexPage = () => (
                   className="project-img"
                   src="../images/paintr-home.png"
                   placeholder="blurred"
-                  width={300}
+                  objectFit="contain"
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Paintr web app screenshot"
@@ -113,7 +113,7 @@ const IndexPage = () => (
                   className="project-img"
                   src="../images/gameof15-home.png"
                   placeholder="blurred"
-                  // width={300}
+                  objectFit="contain"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Online Game of Fifteen screenshot"
@@ -138,6 +138,7 @@ const IndexPage = () => (
                     style={{
                       maxWidth: '700px',
                       margin: '0',
+                      objectFit: "contain",
                     }}
                   />
                 </div>
@@ -159,7 +160,7 @@ const IndexPage = () => (
                   className="project-img"
                   src="../images/taptempo-home.png"
                   placeholder="blurred"
-                  width={300}
+                  objectFit="contain"
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Tap Tempo website screenshot"
