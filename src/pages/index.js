@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import "../styles/index.scss";
+import styles from "../styles/index.module.scss";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Social from "../components/social"
@@ -12,7 +12,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <div className="home-container">
+    <div className={styles.homeWrapper}>
       <header>
         <h1>Hi, I’m Daria.</h1>
         <nav>
@@ -24,36 +24,35 @@ const IndexPage = () => (
           <span>&#47;&#47; creative thinker</span>
         </h2>
         <StaticImage
-          className="hero-image"
+          className={styles.heroImage}
           src="../images/daria-tsvetkova.png"
-          loading="eager"
           placeholder="blurred"
           quality={100}
           objectFit="contain"
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Daria Tsvetkova, web developer and musician from Toronto"
         />
-        <p className="btn-container">
-          <a className="btn" href="/#projects">
+        <p className={styles.btnContainer}>
+          <a className={styles.btnLink} href="/#projects">
               See my projects
           </a>
         </p>
       </header>
 
       <main>
-        <section className="about">
+        <section className={styles.about}>
           <h3>About Me</h3>
-          <div className="article-left">
-            <p>A friend once described me as a throwback to the Renaissance era. While not nearly so old, I do enjoy creativity in its various forms: <a className="text-link" href="https://soundcloud.com/liuthsounds" target="_blank" rel="noreferrer">music</a>, design, <a className="text-link" href="https://ko-fi.com/dariascananigans/posts" target="_blank" rel="noreferrer">creative writing</a>, and, most of all, programming.</p>
+          <div className={styles.articleLeft}>
+            <p>A friend once described me as a throwback to the Renaissance era. While not nearly so old, I do enjoy creativity in its various forms: <a className={styles.textLink} href="https://soundcloud.com/liuthsounds" target="_blank" rel="noreferrer">music</a>, design, <a className={styles.textLink} href="https://ko-fi.com/dariascananigans/posts" target="_blank" rel="noreferrer">creative writing</a>, and, most of all, programming.</p>
             <p>My experience with programming started in middle school computer classes, where I learned languages such as Turbo Pascal and Delphi, and built elaborate text quests, a cockroach race game, and my first functioning website with an HTML table layout.</p>
           </div>
-          <div className="article-right">
+          <div className={styles.articleRight}>
             <p>Fast forward to the 2020 pandemic: I decided to use the time in quarantine to flex my programming muscles again and learn some modern languages. I picked up JavaScript, built a couple of websites, and watched a growing number of people use them every day. I learned that web development was an apt way to channel my creativity into useful products.</p>
-            <p>Currently, I am <a className="text-link" href="https://www.linkedin.com/in/daria-tsvetkova/" target="_blank" rel="noreferrer">looking for full-time opportunities</a> in front-end development. I’m eager to learn from experienced developers and to apply my skills to help the right business grow.</p>
+            <p>Currently, I am <a className={styles.textLink} href="https://www.linkedin.com/in/daria-tsvetkova/" target="_blank" rel="noreferrer">looking for full-time opportunities</a> in front-end development. I’m eager to learn from experienced developers and to apply my skills to help the right business grow.</p>
           </div>
         </section>
 
-        <section className="skills">
+        <section className={styles.skills}>
           <h3>Skills</h3>
           <p>I am a self-taught developer. I gained my knowledge through courses on Lynda, freeCodeCamp, YouTube and other platforms. I am also lucky to have been mentored by senior developers from my network who guided my learning process and reviewed my code.</p>
           <ul>
@@ -78,16 +77,16 @@ const IndexPage = () => (
           </ul>
         </section>
 
-        <section id="projects" className="projects">
+        <section id="projects" className={styles.projects}>
           <h3>Projects</h3>
           <ul>
 
-            <li className="project-card">
-              <Link to="/paintr/" className="project-container">
-                <small className="num-card">01</small>
+            <li className={styles.projectCard}>
+              <Link to="/paintr/" className={styles.projectContainer}>
+                <small className={styles.numCard}>01</small>
                 <h4>Paintr</h4>
                 <StaticImage
-                  className="project-img"
+                  className={styles.projectImg}
                   src="../images/paintr-home.png"
                   placeholder="blurred"
                   objectFit="contain"
@@ -95,22 +94,22 @@ const IndexPage = () => (
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Paintr web app screenshot"
                 />
-                <p className="descr">A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme. <span className="text-link">Learn more</span></p>
-                <div className="stack-tags">
-                  <span className="stack-tag">React</span>
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">CSS</span>
+                <p className={styles.descr}>A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme. <span className={styles.textLink}>Learn more</span></p>
+                <div className={styles.stackTags}>
+                  <span className={styles.stackTag}>React</span>
+                  <span className={styles.stackTag}>JavaScript</span>
+                  <span className={styles.stackTag}>HTML</span>
+                  <span className={styles.stackTag}>CSS</span>
                 </div>
               </Link>
             </li>
 
-            <li className="project-card">
-              <Link to="/game-of-15/" className="project-container">
-                <small className="num-card">02</small>
+            <li className={styles.projectCard}>
+              <Link to="/game-of-15/" className={styles.projectContainer}>
+                <small className={styles.numCard}>02</small>
                 <h4>Game of Fifteen</h4>
                 <StaticImage
-                  className="project-img"
+                  className={styles.projectImg}
                   src="../images/gameof15-home.png"
                   placeholder="blurred"
                   objectFit="contain"
@@ -118,20 +117,20 @@ const IndexPage = () => (
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Online Game of Fifteen screenshot"
                 />
-                <p>Classic 15 puzzle with modern neomorphic design, a dark mode, and multiple interaction methods that resemble the physical puzzle. <span className="text-link">Learn more</span></p>
-                <div className="stack-tags">
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">Scss</span>
+                <p className={styles.descr}>Classic 15 puzzle with modern neomorphic design, a dark mode, and multiple interaction methods that resemble the physical puzzle. <span className={styles.textLink}>Learn more</span></p>
+                <div className={styles.stackTags}>
+                  <span className={styles.stackTag}>JavaScript</span>
+                  <span className={styles.stackTag}>HTML</span>
+                  <span className={styles.stackTag}>Scss</span>
                 </div>
               </Link>
             </li>
 
-            <li className="project-card">
-              <Link to="/clap-card/" className="project-container">
-                <small className="num-card">03</small>
+            <li className={styles.projectCard}>
+              <Link to="/clap-card/" className={styles.projectContainer}>
+                <small className={styles.numCard}>03</small>
                 <h4>Clap Card</h4>
-                <div className="project-img">
+                <div className={styles.projectImg}>
                   <img 
                     src={clapCard} 
                     alt="Clap Card project demo"
@@ -142,22 +141,22 @@ const IndexPage = () => (
                     }}
                   />
                 </div>
-                <p>An interactive online birthday card that activates when a user claps their hands. <span className="text-link">Learn more</span></p>
-                <div className="stack-tags">
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">CSS</span>
-                  <span className="stack-tag">Web Audio API</span>
+                <p className={styles.descr}>An interactive online birthday card that activates when a user claps their hands. <span className={styles.textLink}>Learn more</span></p>
+                <div className={styles.stackTags}>
+                  <span className={styles.stackTag}>JavaScript</span>
+                  <span className={styles.stackTag}>HTML</span>
+                  <span className={styles.stackTag}>CSS</span>
+                  <span className={styles.stackTag}>Web Audio API</span>
                 </div>
               </Link>
             </li>
 
-            <li className="project-card">
-              <Link to="/tap-tempo/" className="project-container">
-                <small className="num-card">04</small>
+            <li className={styles.projectCard}>
+              <Link to="/tap-tempo/" className={styles.projectContainer}>
+                <small className={styles.numCard}>04</small>
                 <h4>Tap Tempo</h4>
                 <StaticImage
-                  className="project-img"
+                  className={styles.projectImg}
                   src="../images/taptempo-home.png"
                   placeholder="blurred"
                   objectFit="contain"
@@ -165,13 +164,13 @@ const IndexPage = () => (
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Tap Tempo website screenshot"
                 />
-                <p>A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month. <span className="text-link">Learn more</span></p>
-                <div className="stack-tags">
-                  <span className="stack-tag">JavaScript</span>
-                  <span className="stack-tag">jQuery</span>
-                  <span className="stack-tag">HTML</span>
-                  <span className="stack-tag">CSS</span>
-                  <span className="stack-tag">SVG graphics</span>
+                <p className={styles.descr}>A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month. <span className={styles.textLink}>Learn more</span></p>
+                <div className={styles.stackTags}>
+                  <span className={styles.stackTag}>JavaScript</span>
+                  <span className={styles.stackTag}>jQuery</span>
+                  <span className={styles.stackTag}>HTML</span>
+                  <span className={styles.stackTag}>CSS</span>
+                  <span className={styles.stackTag}>SVG graphics</span>
                 </div>
               </Link>
             </li>

@@ -10,7 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import "../styles/layout.scss"
+
+import "../styles/resets.scss"
+import "../styles/global.module.scss"
+import style from "../styles/layout.module.scss"
 import Social from './social'
 
 const Layout = ({ children }) => {
@@ -28,20 +31,20 @@ const Layout = ({ children }) => {
     <>
       {children}
       <footer>
-        <div className="footer-container">
-          <div className="footer-left">
-            <p className="footer-h3">Let’s connect</p>
+        <div className={style.footerContainer}>
+          <div className={style.footerLeft}>
+            <p className={style.footerH3}>Let’s connect</p>
             <p>You made it all the way to the footer! I’m flattered. But you don’t have to stop here — let’s connect on social media!</p>
             <Social classes={false}/>
           </div>
-          <div className="footer-line" />
-          <nav className="footer-right">
+          <div className={style.footerLine} />
+          <nav className={style.footerRight}>
             <ul>
               <li>
-                <Link className="footer-h3" to="/">Home</Link>
+                <Link className={style.footerH3} to="/">Home</Link>
               </li>
               <li>
-                <a className="footer-h3" href="/#projects">Projects</a>
+                <a className={style.footerH3} href="/#projects">Projects</a>
               </li>
               <li>
                 <Link to="/paintr/">Paintr</Link>

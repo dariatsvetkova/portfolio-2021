@@ -45,6 +45,7 @@ const Paintr = () => (
             className="hero-image"
             src="../images/paintr-screen-1.png"
             placeholder="blurred"
+            objectFit="contain"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Paintr web app screenshot"
@@ -68,52 +69,53 @@ const Paintr = () => (
             className="screenshot"
             src="../images/paintr-screen-2.png"
             placeholder="blurred"
+            objectFit="scale-down"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Paintr web app screenshot"
             style={{
-              width: "auto",
-              flex: "1 0 40em",
-              order: 1,
+              flex: "0 1 80vh",
+              maxWidth: "content",
             }}
           />
           <StaticImage
-            className="screenshot"
+            className="screenshot screenshot-mob"
             src="../images/paintr-screen-3.png"
             placeholder="blurred"
+            objectFit="contain"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Paintr web app screenshot"
             style={{
-              width: "auto",
-              flex: "0 1 13em",
-              order: 2,
+              // width: "auto",
+              flex: "0 1 20vh",
             }}
           />
           <StaticImage
             className="screenshot"
             src="../images/paintr-screen-4.png"
             placeholder="blurred"
+            objectFit="contain"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Paintr web app screenshot"
             style={{
-              width: "auto",
-              flex: "0 1 13em",
-              order: 3,
+              // width: "auto",
+              flex: "0 1 20vh",
+              marginLeft: "10vw",
             }}
           />
           <StaticImage
             className="screenshot"
             src="../images/paintr-screen-5.png"
             placeholder="blurred"
+            objectFit="contain"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Paintr web app screenshot"
             style={{
-              width: "auto",
-              flex: "0 1 13em",
-              order: 4,
+              // width: "auto",
+              flex: "0 1 20vh"
             }}
           />
         </section>

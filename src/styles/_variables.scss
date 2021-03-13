@@ -1,4 +1,4 @@
-// Colours
+/* Colours */
 
 $DT-black: #1A1919;
 $DT-dark-grey: #858383;
@@ -13,7 +13,7 @@ $DT-accent-dark: #97301C;
 $DT-bckgrd: linear-gradient(180deg, rgba(245, 223, 207, 0.47) 0%, #FBFAF9 100%), #FBFAF9;
 
 
-// Responsive
+/* Responsive */
 
 $tablet: 1050px;
 $mobile: 700px;
@@ -38,8 +38,7 @@ $mobile: 700px;
   }
 }
 
-
-// Other
+/* Other */
 
 @mixin shadow {
   box-shadow: 0px 0px 16px rgba(133, 131, 131, 0.3);
