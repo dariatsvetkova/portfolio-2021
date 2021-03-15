@@ -13,7 +13,7 @@ import { Link } from "gatsby"
 
 import "../styles/resets.scss"
 import "../styles/global.module.scss"
-import style from "../styles/layout.module.scss"
+import * as style from "../styles/layout.module.scss"
 import Social from './social'
 
 const Layout = ({ children }) => {
@@ -27,6 +27,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log(style);
+
   return (
     <>
       {children}
@@ -37,7 +39,7 @@ const Layout = ({ children }) => {
             <p>You made it all the way to the footer! I’m flattered. But you don’t have to stop here — let’s connect on social media!</p>
             <Social classes={false}/>
           </div>
-          <div className={style.footerLine} />
+          <div className={style['footer-line']} />
           <nav className={style.footerRight}>
             <ul>
               <li>

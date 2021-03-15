@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "daria-tsvetkova-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio website built with Gatsby, React, CSS Modules",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Daria Tsvetkova",
   "dependencies": {
     "@fontsource/cormorant-garamond": "^4.2.2",
     "@fontsource/lato": "^4.2.2",
@@ -42,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dariatsvetkova/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/dariatsvetkova/portfolio/issues"
   }
 }
