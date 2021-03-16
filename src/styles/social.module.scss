@@ -1,6 +1,6 @@
 @import "variables";
 
-.social-icons {
+.socialIcons {
   width: max-content;
   font-size: 1.4em;
   line-height: 200%;
@@ -15,7 +15,7 @@
     margin-right: 48px;
   }
 
-  &-vertical {
+  &Vertical {
     @include mobile {
       height: 27vw;
       flex-direction: column;

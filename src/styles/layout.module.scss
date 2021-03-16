@@ -27,7 +27,7 @@ footer {
   }
 }
 
-.footer-h3 {
+.footerH3 {
   margin: 0 0 0.5em 0;
   font-family: 'Cormorant Garamond', serif;
   font-style: normal;
@@ -41,7 +41,6 @@ footer {
 }
 
 .footerContainer {
-  background: red;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -57,8 +56,8 @@ footer {
     align-items: flex-start;
   }
 
-  .footer-left,
-  .footer-right {
+  .footerLeft,
+  .footerRight {
     flex: 0 1 260px;
 
     @include mobile {
@@ -67,7 +66,7 @@ footer {
     }
   }
 
-  .footer-left {
+  .footerLeft {
     @include mobile {
       p:last-of-type {
         margin-bottom: 1em;
@@ -75,7 +74,7 @@ footer {
     }
   }
 
-  .footer-line {
+  .footerLine {
     width: 1px;
     height: 100%;
     border-right: 1px solid $DT-black;

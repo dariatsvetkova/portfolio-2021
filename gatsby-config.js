@@ -16,6 +16,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            exportLocalsConvention: 'camelCaseOnly'
+          }
+        },
+      },
+    },
   ],
 }
