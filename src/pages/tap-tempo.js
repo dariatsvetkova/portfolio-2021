@@ -53,24 +53,30 @@ const TapTempo = () => (
       </section>
 
       <section className={styles.screenshotContainer}>
-        <StaticImage
-          className={styles.screenshot}
-          src="../images/taptempo-screen-1.png"
-          placeholder="blurred"
-          width={400}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Tap Tempo web app screenshot"
-        />
-        <StaticImage
-          className={styles.screenshot}
-          src="../images/taptempo-screen-2.png"
-          placeholder="blurred"
-          width={400}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Tap Tempo web app screenshot"
-        />
+        <div className={styles.screenshotsLeft}>
+          <StaticImage
+            className={styles.screenshot}
+            src="../images/taptempo-screen-1.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1800/980}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Tap Tempo web app screenshot"
+          />
+        </div>
+        <div className={styles.screenshotsRight}>
+          <StaticImage
+            className={`${styles.screenshot} ${styles.screenshotMob}`}
+            src="../images/taptempo-screen-2.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Tap Tempo web app screenshot"
+          />
+        </div>
       </section>
 
       <section className={`${styles.sectionPage} ${styles.projectDetails}`}>

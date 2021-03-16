@@ -122,16 +122,14 @@
 }
   
 .screenshotContainer {
-  height: 100vh;
   width: 100vw;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  min-height: 100vh;
+  padding: 10vh 15vw;
   background: $DT-light-grey;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 
   @include mobile {
     padding-left: 2.14em;
@@ -139,12 +137,28 @@
   }
 }
 
+.screenshotContainer > * {
+  flex: 0 0 50%;
+  height: min-content;
+
+  @include mobile {
+    flex-basis: 100%;
+  }
+}
+
+.screenshotsLeft,
+.screenshotsRight {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .screenshot {
-  // max-width: 30vw;
-  margin: 0.5em;
+  margin: 1em;
   @include shadow;
 
-  &-mob {
+  &Mob {
     box-shadow: none;
   }
 }

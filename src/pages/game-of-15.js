@@ -62,29 +62,36 @@ const GameOf15 = () => (
       </section>
 
       <section className={styles.screenshotContainer}>
+        <div className={styles.screenshotsLeft}>
+          <StaticImage
+            className={styles.screenshot}
+            src="../images/gameof15-screen-2.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1920/2192}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Game of Fifteen web app screenshot"
+          />
+        </div>
+        <div className={styles.screenshotsRight}>
+          <StaticImage
+            className={styles.screenshot}
+            src="../images/gameof15-screen-3.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1920/2192}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Game of Fifteen web app screenshot"
+          />
+        </div>
         <StaticImage
-          className={styles.screenshot}
-          src="../images/gameof15-screen-2.png"
-          placeholder="blurred"
-          width={400}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Game of Fifteen web app screenshot"
-        />
-        <StaticImage
-          className={styles.screenshot}
-          src="../images/gameof15-screen-3.png"
-          placeholder="blurred"
-          width={400}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Game of Fifteen web app screenshot"
-        />
-        <StaticImage
-          className={styles.screenshot}
+          className={`${styles.screenshot} ${styles.screenshotMob}`}
           src="../images/gameof15-screen-4.png"
           placeholder="blurred"
-          width={400}
+          objectFit="contain"
+          aspectRatio={1}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Game of Fifteen web app screenshot"

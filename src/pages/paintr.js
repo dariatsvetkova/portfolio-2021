@@ -64,59 +64,50 @@ const Paintr = () => (
       </section>
 
       <section className={styles.screenshotContainer}>
-        <StaticImage
-          className={styles.screenshot}
-          src="../images/paintr-screen-2.png"
-          placeholder="blurred"
-          objectFit="scale-down"
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Paintr web app screenshot"
-          style={{
-            flex: "0 1 80vh",
-            maxWidth: "content",
-          }}
-        />
-        <StaticImage
-          className={`${styles.screenshot} ${styles.screenshotMob}`}
-          src="../images/paintr-screen-3.png"
-          placeholder="blurred"
-          objectFit="contain"
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Paintr web app screenshot"
-          style={{
-            // width: "auto",
-            flex: "0 1 20vh",
-          }}
-        />
-        <StaticImage
-          className={styles.screenshot}
-          src="../images/paintr-screen-4.png"
-          placeholder="blurred"
-          objectFit="contain"
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Paintr web app screenshot"
-          style={{
-            // width: "auto",
-            flex: "0 1 20vh",
-            marginLeft: "10vw",
-          }}
-        />
-        <StaticImage
-          className={styles.screenshot}
-          src="../images/paintr-screen-5.png"
-          placeholder="blurred"
-          objectFit="contain"
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Paintr web app screenshot"
-          style={{
-            // width: "auto",
-            flex: "0 1 20vh"
-          }}
-        />
+        <div className={styles.screenshotsLeft}>
+          <StaticImage
+            className={styles.screenshot}
+            src="../images/paintr-screen-2.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1920/3302}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Paintr web app screenshot"
+          />
+        </div>
+        <div className={styles.screenshotsRight}>
+          <StaticImage
+            className={`${styles.screenshot} ${styles.screenshotMob}`}
+            src="../images/paintr-screen-3.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Paintr web app screenshot"
+          />
+          <StaticImage
+            className={styles.screenshot}
+            src="../images/paintr-screen-4.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1400/868}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Paintr web app screenshot"
+          />
+          <StaticImage
+            className={styles.screenshot}
+            src="../images/paintr-screen-5.png"
+            placeholder="blurred"
+            objectFit="contain"
+            aspectRatio={1400/868}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Paintr web app screenshot"
+          />
+        </div>
       </section>
 
       <section className={`${styles.sectionPage} ${styles.projectDetails}`}>

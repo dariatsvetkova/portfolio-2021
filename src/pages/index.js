@@ -130,14 +130,19 @@ const IndexPage = () => (
             <Link to="/clap-card/" className={styles.projectContainer}>
               <small className={styles.numCard}>03</small>
               <h4>Clap Card</h4>
-              <div className={styles.projectImg}>
+              <div 
+                className={styles.projectImg}
+                style={{
+                  objectFit: "contain",
+                }}
+              >
                 <img 
                   src={clapCard} 
                   alt="Clap Card project demo"
                   style={{
                     maxWidth: '700px',
                     margin: '0',
-                    objectFit: "contain",
+                    borderRadius: "9px",
                   }}
                 />
               </div>
