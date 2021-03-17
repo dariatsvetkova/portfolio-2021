@@ -104,6 +104,16 @@
       grid-column: 3/13;
     }
   }
+
+  .video {
+    width: 60vw;
+    height: 33.75vw;
+
+    @include mobile {
+      width: 85vw;
+      height: 47.8125vw;
+    }
+  }
 }
 
 .projectDetails {

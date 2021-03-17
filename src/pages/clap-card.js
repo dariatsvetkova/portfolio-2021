@@ -41,14 +41,15 @@ const ClapCard = () => (
           <p><a className="textLink" href="https://youtu.be/09y7xGG3jWk" target="_blank" rel="noreferrer">View a video demo</a></p>
         </div>
 
-        <div className={`${styles.video} ${styles.heroImage}`}>
-          <iframe
-            src="https://youtu.be/09y7xGG3jWk"
-            title="Clap Card video demo"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            frameBorder="0"
-          />
-        </div>
+        <iframe className={`${styles.video} ${styles.heroImage}`}
+          src="https://www.youtube-nocookie.com/embed/09y7xGG3jWk?rel=0"
+          title="Clap Card project demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          allowfullscreen
+        />
       </section>
 
       <section className={`${styles.sectionPage} ${styles.projectDetails}`}>
