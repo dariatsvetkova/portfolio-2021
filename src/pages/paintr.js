@@ -28,7 +28,7 @@ const Paintr = () => (
         </div>
         <div className={styles.column}>
           <h5>Stack</h5>
-          <div className={styles.stackTags}>
+          <div>
             <span className="stackTag">React</span>
             <span className="stackTag">JavaScript</span>
             <span className="stackTag">HTML</span>
