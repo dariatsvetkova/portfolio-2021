@@ -242,7 +242,10 @@ textarea {
 }
 
 
-ul, ol {
+ul,
+ol,
+li > ul,
+li > ol {
   list-style: none outside none;
   margin: 0;
   padding-left: 0;
@@ -252,18 +255,6 @@ li {
   margin-left: 0;
   padding-left: 0;
   margin-bottom: calc(1.45rem / 2);
-}
-
-li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-
-li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
 }
 
 li *:last-child {

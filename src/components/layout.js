@@ -12,14 +12,40 @@ import Social from './social'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteNavQuery {
       site {
         siteMetadata {
-          title
+          navigation {
+            name
+            link
+            subnav {
+              name
+              link
+            }
+          }
         }
       }
     }
   `)
+
+  const menu = data.site.siteMetadata.navigation.map(item => {
+    return (
+      <li>
+        <Link key={item.name} className={styles.footerH3} to={item.link}>{item.name}</Link>
+        {item.subnav && 
+          <ul>
+            {item.subnav.map(subItem => {
+              return (
+                <li>
+                  <Link to={subItem.link}>{subItem.name}</Link>
+                </li>
+              )
+            })}
+          </ul>
+        }
+      </li>
+    )
+  })
 
   return (
     <>
@@ -34,24 +60,7 @@ const Layout = ({ children }) => {
           <div className={styles.footerLine} />
           <nav className={styles.footerRight}>
             <ul>
-              <li>
-                <Link className={styles.footerH3} to="/">Home</Link>
-              </li>
-              <li>
-                <a className={styles.footerH3} href="/#projects">Projects</a>
-              </li>
-              <li>
-                <Link to="/paintr/">Paintr</Link>
-              </li>
-              <li>
-                <Link to="/game-of-15/">Game of Fifteen</Link>
-              </li>
-              <li>
-                <Link to="/clap-card/">Clap Card</Link>
-              </li>
-              <li>
-                <Link to="/tap-tempo/">Tap Tempo</Link>
-              </li>
+              {menu}
             </ul>
           </nav>
         </div>
