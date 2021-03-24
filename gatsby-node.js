@@ -1,6 +1,9 @@
 const path = require(`path`)
 
-// Define the Navigation node type
+/** 
+ * Type definitions
+ */ 
+
 exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
     type ProjectsJson implements Node @dontInfer {
@@ -23,11 +26,11 @@ exports.sourceNodes = ({ actions }) => {
       live: String
     }
   `)
-  }
+}
 
 
 /**
-* Projects
+* Project pages
 */
 
 exports.onPostBuild = ({ reporter }) => {

@@ -1,6 +1,7 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import ProjectIndex from "../components/projectIndex"
 
 import * as styles from "../styles/index.module.scss";
 
@@ -8,7 +9,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Social from "../components/social"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -79,103 +80,10 @@ const IndexPage = () => {
 
         <section id="projects" className={`${styles.sectionHome} ${styles.projects}`}>
           <h3>Projects</h3>
-          <ul>
-
-            <li className={styles.projectCard}>
-              <Link to="/paintr/" className={styles.projectContainer}>
-                <small className={styles.numCard}>01</small>
-                <h4>Paintr</h4>
-                {/* <GatsbyImage
-                  className={styles.projectImg}
-                  image={paintrImg}
-                  alt="Paintr web app screenshot"
-                /> */}
-                <p className={styles.descr}>A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme. <span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
-                <div className={styles.stackTags}>
-                  <span className="stackTag">React</span>
-                  <span className="stackTag">JavaScript</span>
-                  <span className="stackTag">HTML</span>
-                  <span className="stackTag">CSS</span>
-                </div>
-              </Link>
-            </li>
-
-            <li className={styles.projectCard}>
-              <Link to="/gameof15/" className={styles.projectContainer}>
-                <small className={styles.numCard}>02</small>
-                <h4>Game of Fifteen</h4>
-                {/* <StaticImage
-                  className={styles.projectImg}
-                  src="../images/gameof15-home.png"
-                  placeholder="blurred"
-                  objectFit="contain"
-                  quality={100}
-                  formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Online Game of Fifteen screenshot"
-                /> */}
-                <p className={styles.descr}>Classic 15 puzzle with modern neomorphic design, a dark mode, and multiple interaction methods that resemble the physical puzzle. <span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
-                <div className={styles.stackTags}>
-                  <span className="stackTag">JavaScript</span>
-                  <span className="stackTag">HTML</span>
-                  <span className="stackTag">Scss</span>
-                </div>
-              </Link>
-            </li>
-
-            <li className={styles.projectCard}>
-              <Link to="/clapcard/" className={styles.projectContainer}>
-                <small className={styles.numCard}>03</small>
-                <h4>Clap Card</h4>
-                <div 
-                  className={styles.projectImg}
-                  style={{
-                    objectFit: "contain",
-                  }}
-                >
-                  {/* <img 
-                    src={clapCard} 
-                    alt="Clap Card project demo"
-                    style={{
-                      maxWidth: '700px',
-                      margin: '0',
-                      borderRadius: "9px",
-                    }}
-                  /> */}
-                </div>
-                <p className={styles.descr}>An interactive online birthday card that activates when a user claps their hands. <span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
-                <div className={styles.stackTags}>
-                  <span className="stackTag">JavaScript</span>
-                  <span className="stackTag">HTML</span>
-                  <span className="stackTag">CSS</span>
-                  <span className="stackTag">Web Audio API</span>
-                </div>
-              </Link>
-            </li>
-
-            <li className={styles.projectCard}>
-              <Link to="/taptempo/" className={styles.projectContainer}>
-                <small className={styles.numCard}>04</small>
-                <h4>Tap Tempo</h4>
-                {/* <StaticImage
-                  className={styles.projectImg}
-                  src="../images/taptempo-home.png"
-                  placeholder="blurred"
-                  objectFit="contain"
-                  quality={95}
-                  formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Tap Tempo website screenshot"
-                /> */}
-                <p className={styles.descr}>A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month. <span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
-                <div className={styles.stackTags}>
-                  <span className="stackTag">JavaScript</span>
-                  <span className="stackTag">jQuery</span>
-                  <span className="stackTag">HTML</span>
-                  <span className="stackTag">CSS</span>
-                  <span className="stackTag">SVG graphics</span>
-                </div>
-              </Link>
-            </li>
-          </ul>
+          <ProjectIndex 
+            projects={data.allProjects.edges}
+            images={data.allImages.edges}
+          />
         </section>
       </main>
     </Layout>
@@ -183,3 +91,39 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const data = graphql`
+  query projectsQuery {
+    allProjects: allProjectsJson(
+      sort: { order: ASC, fields: number }
+    ) {
+      edges {
+        node {
+          slug
+          number
+          title
+          descr
+          tags
+        }
+      }
+    }
+    allImages: allImageSharp(filter: {original: {src: {regex: "/home/"}}}) {
+      edges {
+        node {
+          gatsbyImageData(
+            aspectRatio: 1.6129
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+            quality: 95
+          )
+          parent {
+            ... on File {
+              relativePath
+            }
+          }
+        }
+      }
+    }  
+  }
+`
