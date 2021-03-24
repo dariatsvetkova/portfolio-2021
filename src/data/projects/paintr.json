@@ -1,0 +1,22 @@
+{
+  "number": 1,
+  "title": "Paintr",
+  "slug": "/paintr",
+  "descr": 
+    "A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.",
+  "role": 
+    "Idea, design and development",
+  "tags": ["React", "JavaScript", "HTML", "CSS"],
+  "urls": {
+    "code": "https://github.com/dariatsvetkova/paintr",
+    "live": "https://www.paintr.io/"
+  },
+  "why": 
+    "There are a lot of tools out there that generate colour palettes. But unless you have an eye for graphic design, it is not always obvious how to properly apply a colour palette to a website. This is why I created this tool. It combines a palette generator with a mockup of a generic web page to demonstrate which colours go where. It can be used by everyone, regardless of their experience with design or coding.",
+  "stack":
+    "React was an obvious choice for this project because it allows passing the generated colours as state to multiple components on the page. It also easily allows you to style all elements of the demo page within the component. A third-party library color-name-list was used to convert user input from colour names into hex values. The project was created with create-react-app and is hosted on Github Pages, allowing for live updates and testing via Github Actions.",
+  "challenges": 
+    "For this project, I decided to write a palette generator from scratch to fulfill the requirements specific for website colour schemes: unlike other colour palettes, they contain only two to three “colourful” colours, and the rest are neutral colours that balance them. Another complexity was enforcing the WCAG contrast requirements to ensure that the resulting colour schemes meet accessibility standards.",
+  "lessons": 
+    "This project was a great practice in React core concepts and Hooks. I also took a deep dive into colour theory, different colour formats used on the web, and web design principles. Finally, I got to practise using version control, and learned about implementing a Github Actions workflow."
+}

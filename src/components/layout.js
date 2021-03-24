@@ -11,6 +11,7 @@ import * as styles from "../styles/layout.module.scss"
 import Social from './social'
 
 const Layout = ({ children }) => {
+
   const data = useStaticQuery(graphql`
     query SiteNavQuery {
       site {
@@ -30,19 +31,8 @@ const Layout = ({ children }) => {
 
   const menu = data.site.siteMetadata.navigation.map(item => {
     return (
-      <li>
-        <Link key={item.name} className={styles.footerH3} to={item.link}>{item.name}</Link>
-        {item.subnav && 
-          <ul>
-            {item.subnav.map(subItem => {
-              return (
-                <li>
-                  <Link to={subItem.link}>{subItem.name}</Link>
-                </li>
-              )
-            })}
-          </ul>
-        }
+      <li key={item.name}>
+        <Link className={styles.footerH3} to={item.link}>{item.name}</Link>
       </li>
     )
   })

@@ -7,6 +7,7 @@ module.exports = {
       {
         name: "Home",
         link: "/",
+        subnav: [],
       },
       {
         name: "Projects",
@@ -39,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/data/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -52,6 +53,14 @@ module.exports = {
             exportLocalsConvention: 'camelCaseOnly'
           }
         },
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/data/`,
       },
     },
   ],
