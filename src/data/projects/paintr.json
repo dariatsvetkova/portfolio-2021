@@ -2,6 +2,7 @@
   "number": 1,
   "title": "Paintr",
   "slug": "/paintr",
+  "next": "/gameof15",
   "descr": 
     "A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.",
   "role": 

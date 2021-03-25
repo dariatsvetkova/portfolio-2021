@@ -2,6 +2,8 @@
   "number": 3,
   "title": "Clap Card",
   "slug": "/clapcard",
+  "previous": "/gameof15",
+  "next": "/taptempo",
   "descr": 
     "ClapCard is an interactive online birthday card that activates when a user claps their hands.",
   "role": 

@@ -9,7 +9,8 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
 
 const ProjectTemplate = ({ pageContext, data }) => {
 
-  const project = pageContext.project  
+  const project = pageContext.project
+  console.log("project: ", project)
 
   return (
     <Layout>
@@ -115,10 +116,18 @@ const ProjectTemplate = ({ pageContext, data }) => {
         </section>
 
         <nav className={styles.prevNext}>
-          <Link className={`textLink ${styles.next}`} to="/game-of-15">
-              Next project
-              <span className={`icon ${styles.arrow}`}><BsArrowRight /></span>
-          </Link>
+          {project.previous && 
+            <Link className={`textLink ${styles.prev}`} to={project.previous}>
+                <span className={`icon ${styles.arrow}`}><BsArrowLeft /></span>
+                Previous project
+            </Link>
+          }
+          {project.next && 
+            <Link className={`textLink ${styles.next}`} to={project.next}>
+                Next project
+                <span className={`icon ${styles.arrow}`}><BsArrowRight /></span>
+            </Link>
+          }
         </nav>
       </main>
     </Layout>
@@ -128,7 +137,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
 export default ProjectTemplate;
 
 export const data = graphql`
-  query imageQuery($slug: String!) {
+  query($slug: String!) {
     heroImg: file(
       relativePath: { regex: "/hero/" },
       relativeDirectory: {eq: $slug}

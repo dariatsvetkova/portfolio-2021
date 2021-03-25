@@ -12,13 +12,15 @@ exports.sourceNodes = ({ actions }) => {
       descr: String!
       embed: String
       lessons: String!
-      urls: Urls
+      next: String
       number: String!
+      previous: String
       role: String!
       slug: String!
       stack: String
       tags: [String]!
       title: String!
+      urls: Urls
       why: String!
     }
     type Urls implements Node @dontInfer {
@@ -64,6 +66,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             stack
             challenges
             lessons
+            previous
+            next
           }
         }
       }
@@ -82,8 +86,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: project.node.slug,
       component: path.resolve(`./src/templates/project.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         project: project.node,
         slug: project.node.slug.slice(1),
       },

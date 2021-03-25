@@ -2,6 +2,7 @@
   "number": 4,
   "title": "Tap Tempo",
   "slug": "/taptempo",
+  "previous": "/clapcard",
   "descr": 
     "A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month.",
   "role": 
