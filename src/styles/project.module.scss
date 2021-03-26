@@ -199,35 +199,42 @@
   justify-content: center;
   align-items: center;
 
+  @include grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+  }
+  
   @include mobile {
     padding-left: 2.14em;
     padding-right: 2.14em;
   }
 }
 
-.screenshotContainer > * {
-  flex: 0 0 50%;
-  height: min-content;
-
-  @include mobile {
-    flex-basis: 100%;
-  }
-}
-
-.screenshotsLeft,
-.screenshotsRight {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .screenshot {
   margin: 1em;
   @include shadow;
+  flex: 0 0 45%;
 
+  @include grid {
+    grid-column: 2/3;
+  }
+
+  @include mobile {
+    flex-basis: 90%;
+  }
+  
   &Mob {
+    order: -1;
     box-shadow: none;
+  }
+
+  &Large {
+    order: -2;
+
+    @include grid {
+      grid-column: 1/2;
+      grid-row: 1/4;
+    }
   }
 }
 
@@ -274,8 +281,20 @@
   }
 }
 
-.tapTempo {
+.taptempo {
   .projectDescr {
+    padding-bottom: 1em;
+  }
+
+  .screenshotLarge {
+    @include grid {
+      grid-row: 1/2;
+    }
+  }
+}
+
+.clapcard {
+  .projectDetails:nth-of-type(2) {
     padding-bottom: 1em;
   }
 }

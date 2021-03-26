@@ -10,7 +10,14 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
 const ProjectTemplate = ({ pageContext, data }) => {
 
   const project = pageContext.project
-  console.log("project: ", project)
+  let shortSlug = project.slug.slice(1)
+
+  const screenshots = data.screenshots.edges.filter(image => {
+    let path = image.node.parent.relativePath.split("/")[0]
+    return path === shortSlug
+  })
+
+  const projectClass = styles[shortSlug]
 
   return (
     <Layout>
@@ -24,7 +31,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
         <h1>{project.title}</h1>
       </header>
 
-      <main>
+      <main className={projectClass}>
         <section className={`${styles.sectionPage} ${styles.projectDescr}`}>
           <p>{project.descr}</p>
           <div className={styles.column}>
@@ -64,7 +71,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
               </p>
             }
           </div>
-          {project.heroImg && 
+          {data.heroImg && 
             <GatsbyImage
               className={styles.heroImage}
               image={getImage(data.heroImg)}
@@ -97,12 +104,25 @@ const ProjectTemplate = ({ pageContext, data }) => {
           }
         </section>
 
-        {/* <section className={styles.screenshotContainer}>
-          <div className={styles.screenshotsLeft}>
-          </div>
-          <div className={styles.screenshotsRight}>
-          </div>
-        </section> */}
+        {screenshots.length > 0 &&
+          <section className={styles.screenshotContainer}>
+            {screenshots.map(screenshot => {
+
+              const classes = `
+                ${styles.screenshot}
+                ${screenshot.node.parent.relativePath.match(/-mob/) ? styles.screenshotMob : ""}
+                ${screenshot.node.parent.relativePath.match(/-large/) ? styles.screenshotLarge : ""}
+              `
+              return (
+                <GatsbyImage
+                  className={classes}
+                  image={getImage(screenshot.node)}
+                  alt={`${project.title} project screenshot`}
+                />
+              )
+            })}
+          </section>
+        }
 
         <section className={`${styles.sectionPage} ${styles.projectDetails}`}>
           <article>
@@ -148,9 +168,27 @@ export const data = graphql`
           layout: CONSTRAINED
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
-          quality: 95
+          quality: 100
         )
       }
     }
+    screenshots: allImageSharp(filter: {original: {src: {regex: "/screen-/"}}}) {
+      edges {
+        node {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+            quality: 100
+          )
+          parent {
+            ... on File {
+              relativePath
+            }
+          }
+        }
+      }
+    }  
+
   }
 `
