@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
   const { slug, number, title, descr, tags} = props.project
 
   return (
-    <li key={number} className={styles.projectCard}>
+    <li className={styles.projectCard}>
       <Link to={slug} className={styles.projectContainer}>
         <small className={styles.numCard}>{number < 10 ? "0" + number : number}</small>
         <h4>{title}</h4>
@@ -41,8 +41,8 @@ const ProjectCard = (props) => {
 
         <p className={styles.descr}>{descr}<span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
         <div className={styles.stackTags}>
-          {tags.map(tag => {
-            return <span className="stackTag">{tag}</span>
+          {tags.map((tag, index) => {
+            return <span key={index} className="stackTag">{tag}</span>
           })}
         </div>
       </Link>
