@@ -33,6 +33,18 @@ const Layout = ({ children }) => {
     return (
       <li key={item.name}>
         <Link className={styles.footerH3} to={item.link}>{item.name}</Link>
+
+        {item.subnav.length > 0 && 
+          <ul>
+            {item.subnav.map(subItem => {
+              return (
+                <li key={subItem.name}>
+                  <Link to={subItem.link}>{subItem.name}</Link>
+                </li>
+              )
+            })}
+          </ul>
+        }
       </li>
     )
   })
