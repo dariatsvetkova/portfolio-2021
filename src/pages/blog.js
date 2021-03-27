@@ -13,14 +13,14 @@ const Blog = () => (
         padding: "3em",
       }}
     >
-      <Link className="text-link" to="/">
+      <Link className="textLink" to="/">
         <span className="icon" style={{ marginRight: "1.5em",}}>
           <BsArrowLeft />
         </span>
         Back
       </Link>
       <h1>Blog is coming soon!</h1>
-      <p>In the meantime, you can see what I'm up to on <a className="text-link" href="https://twitter.com/daria_tsss" target="_blank" rel="noreferrer">Twitter</a>.</p>
+      <p>In the meantime, you can see what I'm up to on <a className="textLink" href="https://twitter.com/daria_tsss" target="_blank" rel="noreferrer">Twitter</a>.</p>
     </article>
   </Layout>
 );
