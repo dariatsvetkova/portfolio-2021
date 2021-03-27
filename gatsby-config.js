@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Daria Tsvetkova \/\/ Front-End Developer`,
-    description: `Daria Tsvetkova is a front-end developer, musician, and creative thinker in Toronto, Canada. Learn more about her experience, skills and projects.`,
-    author: `@dariatsvetkova`,
+    description: `Hi, I’m Daria Tsvetkova — a front-end developer and musician based in Toronto, Canada. Learn more about my experience, skills and projects.`,
+    url: "https://dariatsvetkova.ca",
+    author: `Daria Tsvetkova`,
+    twitterUsername: "@daria_tsss",
     navigation: [
       {
         name: "Home",
@@ -35,6 +37,18 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Daria Tsvetkova`,
+        short_name: `Daria`,
+        start_url: `/`,
+        background_color: `#FBFAF9`,
+        theme_color: `#EFAE80`,
+        display: `standalone`,
+        icon: `src/data/images/favicon.svg`,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
