@@ -21,7 +21,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title={`${project.title} project info`} />
+      <SEO title={`${project.title} Project Info`} />
 
       <header className={styles.headerPage}>
         <nav>

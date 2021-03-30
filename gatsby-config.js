@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Daria Tsvetkova \/\/ Front-End Developer`,
-    description: `Hi, I’m Daria Tsvetkova — a front-end developer and musician based in Toronto, Canada. Learn more about my experience, skills and projects.`,
+    description: `Daria Tsvetkova is a front-end developer and musician based in Toronto, Canada. Learn more about her experience, skills and projects.`,
     url: "https://dariatsvetkova.ca",
     author: `Daria Tsvetkova`,
     twitterUsername: "@daria_tsss",

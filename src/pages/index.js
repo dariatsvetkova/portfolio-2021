@@ -10,9 +10,30 @@ import SEO from "../components/seo"
 import Social from "../components/social"
 
 const IndexPage = ({ data }) => {
+
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Daria Tsvetkova",
+    "description": "Daria Tsvetkova is a front-end developer and musician based in Toronto, Canada.",
+    "url": "https://dariatsvetkova.ca/",
+    "image": "https://dariatsvetkova.ca/static/daria-tsvetkova-schema.jpg",
+    "sameAs": [
+      "https://twitter.com/daria_tsss",
+      "https://www.linkedin.com/in/daria-tsvetkova/",
+      "https://dariatsvetkova.ca",
+      "https://soundcloud.com/liuthsounds",
+      "https://www.instagram.com/liuth.sounds/"
+    ],
+    "jobTitle": "Web Developer and Musician"
+  }
+
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO 
+        title="Home"
+        schema={schema}
+      />
 
       <header className={styles.headerHome}>
         <h1>Hi, I’m Daria.</h1>
@@ -59,12 +80,12 @@ const IndexPage = ({ data }) => {
           <ul>
             <div>
               <li>HTML</li>
-              <li>CSS</li>
-              <li>Scss</li>
+              <li>CSS, Scss</li>
               <li>JavaScript</li>
+              <li>React</li>
             </div>
             <div>
-              <li>React</li>
+              <li>Gatsby.js</li>
               <li>Node.js</li>
               <li>Version control, Git & GitHub</li>
               <li>WordPress</li>

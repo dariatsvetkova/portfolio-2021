@@ -1,16 +1,9 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, schema }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +11,7 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            url
             author
           }
         }
@@ -34,8 +28,12 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `%s // ${defaultTitle}` : null}
       meta={[
+        {
+          name: `url`,
+          content: site.siteMetadata?.url,
+        },
         {
           name: `description`,
           content: metaDescription,
@@ -50,7 +48,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `person`,
         },
         {
           name: `twitter:card`,
@@ -58,7 +56,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.twitterUsername || ``,
         },
         {
           name: `twitter:title`,
@@ -69,7 +67,13 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      {schema && 
+        <script type="application/ld+JSON">
+          {JSON.stringify(schema)}
+        </script>
+      }
+    </Helmet>
   )
 }
 
