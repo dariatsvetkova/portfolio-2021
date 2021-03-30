@@ -3,8 +3,10 @@ module.exports = {
     title: `Daria Tsvetkova \/\/ Front-End Developer`,
     description: `Daria Tsvetkova is a front-end developer and musician based in Toronto, Canada. Learn more about her experience, skills and projects.`,
     url: "https://dariatsvetkova.ca",
-    author: `Daria Tsvetkova`,
+    author: "Daria Tsvetkova",
     twitterUsername: "@daria_tsss",
+    ogImageSmall: "https://dariatsvetkova.ca/static/daria-tsvetkova-og-small.jpg",
+    ogImageLarge: "https://dariatsvetkova.ca/static/daria-tsvetkova-og-large.jpg",
     navigation: [
       {
         name: "Home",
@@ -21,15 +23,15 @@ module.exports = {
           },
           {
             name: "Game of Fifteen",
-            link: "/game-of-15",
+            link: "/gameof15",
           },
           {
             name: "Clap Card",
-            link: "/clap-card",
+            link: "/clapcard",
           },
           {
             name: "Tap Tempo",
-            link: "/tap-tempo",
+            link: "/taptempo",
           },
         ]
       },
