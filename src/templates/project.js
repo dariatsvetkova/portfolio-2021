@@ -35,11 +35,11 @@ const ProjectTemplate = ({ pageContext, data }) => {
         <section className={`${styles.sectionPage} ${styles.projectDescr}`}>
           <p>{project.descr}</p>
           <div className={styles.column}>
-            <h5>My role</h5>
+            <h2 className={styles.columnTitle}>My role</h2>
             <p>{project.role}</p>
           </div>
           <div className={styles.column}>
-            <h5>Stack</h5>
+            <h2 className={styles.columnTitle}>Stack</h2>
             <div>
               {project.tags.map((tag, index) => 
                 <span key={index} className="stackTag">{tag}</span>
@@ -47,7 +47,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
             </div>
           </div>
           <div className={styles.column}>
-            <h5>Links</h5>
+            <h2 className={styles.columnTitle}>Links</h2>
             <p>
               <a 
                 className="textLink" 
@@ -82,11 +82,11 @@ const ProjectTemplate = ({ pageContext, data }) => {
             <iframe className={`${styles.video} ${styles.heroImage}`}
             src={project.embed}
             title={`${project.title} project demo`}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
-            allowfullscreen
+            allowFullScreen
             />
           }
         </section>
@@ -115,6 +115,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
               `
               return (
                 <GatsbyImage
+                  key={screenshot.node.parent.relativePath}
                   className={classes}
                   image={getImage(screenshot.node)}
                   alt={`${project.title} project screenshot`}

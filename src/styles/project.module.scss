@@ -107,9 +107,18 @@
   }
 }
 
+.columnTitle {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 160%;
+}
+
 .heroImage {
   margin: 4.4em auto 0 auto;
   @include shadow;
+  @include appear-img;
 
   @include grid {
     grid-row: 3/4;

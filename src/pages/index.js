@@ -77,24 +77,18 @@ const IndexPage = ({ data }) => {
           <h3>Skills</h3>
           <p>I am a self-taught developer. I gained my knowledge through courses on Lynda, freeCodeCamp, YouTube and other platforms. I am also lucky to have been mentored by senior developers from my network who guided my learning process and reviewed my code.</p>
           <ul>
-            <div>
-              <li>HTML</li>
-              <li>CSS, Scss</li>
-              <li>JavaScript</li>
-              <li>React</li>
-            </div>
-            <div>
-              <li>Gatsby.js</li>
-              <li>Node.js</li>
-              <li>Version control, Git & GitHub</li>
-              <li>WordPress</li>
-            </div>
-            <div>
-              <li>Adobe Photoshop</li>
-              <li>Figma</li>
-              <li>Google Analytics</li>
-              <li>Search Engine Optimization</li>
-            </div>
+            <li>HTML</li>
+            <li>CSS, Scss</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Gatsby.js</li>
+            <li>Node.js</li>
+            <li>Version control, Git & GitHub</li>
+            <li>WordPress</li>
+            <li>Adobe Photoshop</li>
+            <li>Figma</li>
+            <li>Google Analytics</li>
+            <li>Search Engine Optimization</li>
           </ul>
         </section>
 
@@ -135,7 +129,7 @@ export const data = graphql`
             layout: CONSTRAINED
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
-            quality: 95
+            quality: 100
           )
           parent {
             ... on File {

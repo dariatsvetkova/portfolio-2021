@@ -9,32 +9,32 @@ const Social = (props) => {
     <ul className={`${styles.socialIcons} ${styles[props.classes] || ""}`}>
       <li>
         <a 
-          aria-label="Twitter"
+          aria-label="Link to Twitter profile"
           href="https://twitter.com/daria_tsss"
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillTwitterCircle />
+          <AiFillTwitterCircle aria-label="Twitter icon" />
         </a>
       </li>
       <li>
         <a
-          aria-label="LinkedIn"
+          aria-label="Link to LinkedIn profile"
           href="https://www.linkedin.com/in/daria-tsvetkova/"
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillLinkedin />
+          <AiFillLinkedin aria-label="LinkedIn icon" />
         </a>
       </li>
       <li>
         <a 
-          aria-label="GitHub"
+          aria-label="Link to GitHub profile"
           href="https://github.com/dariatsvetkova/"
           target="_blank"
           rel="noreferrer"
         >
-          <AiOutlineGithub />
+          <AiOutlineGithub aria-label="Github icon" />
         </a>
       </li>
     </ul>
