@@ -10,6 +10,8 @@
   h1 {
     margin: 0;
     align-self: flex-end;
+    @include appear;
+    animation-delay: $delay * 1;
 
     @include grid {
       grid-row: 1/2;
@@ -22,6 +24,10 @@
   }
 
   nav {
+    @include appear-link;
+    transform: translateX(3vw);
+    animation-delay: $delay * 3.5;
+    
     @include grid {
       grid-row: 1/2;
       grid-column: 11/14;
@@ -56,11 +62,23 @@
       @include mobile {
         margin-top: 0.3em;
       }
+      
+      @include appear;
+      
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: $delay * (2 + $i / 3);
+        }
+      }
     }
   }
 
   .btnContainer {
     margin-top: 2em;
+
+    @include appear-link;
+    animation-delay: $delay * 3.5;
+    transform: translateX(-3vw);
     
     @include grid {
       grid-row: 3/4;
@@ -77,6 +95,8 @@
   .heroImage {
     width: 28vw;
     overflow: visible !important;
+    @include appear-img;
+    animation-delay: $delay * 1;
 
     @include grid {
       grid-row: 2/4;

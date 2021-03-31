@@ -48,7 +48,6 @@ const IndexPage = ({ data }) => {
         <StaticImage
           className={styles.heroImage}
           src="../data/images/daria-tsvetkova.png"
-          placeholder="blurred"
           quality={100}
           objectFit="contain"
           formats={["AUTO", "WEBP", "AVIF"]}

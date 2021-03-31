@@ -31,6 +31,12 @@
     h4 {
       color: $DT-accent;
     }
+
+    .projectImg {
+      img {
+        transform: scale(1.04);
+      }
+    }
   }
 
   .numCard {
@@ -46,6 +52,11 @@
     @include border-rad;
     max-width: 700px;
     height: auto;
+    overflow: hidden;
+
+    img {
+      transition: all 0.5s linear;
+    }
   }
 
   @include mobile {
@@ -64,11 +75,11 @@
       display: block;
     }
 
-    &:hover,
-    &:focus {
-      @include shadow;
-      transform: scale(1.01);
-    }
+    // &:hover,
+    // &:focus {
+    //   @include shadow;
+    //   transform: scale(1.01);
+    // }
 
     .numCard {
       grid-area: num;
