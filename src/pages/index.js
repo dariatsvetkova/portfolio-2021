@@ -49,6 +49,7 @@ const IndexPage = ({ data }) => {
           className={styles.heroImage}
           src="../data/images/daria-tsvetkova.png"
           quality={100}
+          loading="eager"
           objectFit="contain"
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Daria Tsvetkova, web developer and musician from Toronto"

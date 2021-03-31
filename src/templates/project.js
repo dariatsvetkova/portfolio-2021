@@ -75,6 +75,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
             <GatsbyImage
               className={styles.heroImage}
               image={getImage(data.heroImg)}
+              loading="eager"
               alt={`${project.title} project screenshot`}
             />
           }
@@ -118,6 +119,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
                   key={screenshot.node.parent.relativePath}
                   className={classes}
                   image={getImage(screenshot.node)}
+                  loading="eager"
                   alt={`${project.title} project screenshot`}
                 />
               )
