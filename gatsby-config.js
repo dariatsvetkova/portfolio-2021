@@ -47,7 +47,7 @@ module.exports = {
         short_name: `Daria`,
         start_url: `/`,
         background_color: `#FBFAF9`,
-        theme_color: `#EFAE80`,
+        theme_color: `#F5DFCF`,
         display: `standalone`,
         icon: `src/data/images/favicon.svg`,
       },
