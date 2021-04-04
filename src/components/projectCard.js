@@ -39,7 +39,7 @@ const ProjectCard = (props) => {
             />
         }
 
-        <p className={styles.descr}>{descr}<span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
+        <p className={styles.descr}>{descr} <span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
         <div className={styles.stackTags}>
           {tags.map((tag, index) => {
             return <span key={index} className="stackTag">{tag}</span>
