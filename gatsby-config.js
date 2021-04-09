@@ -6,8 +6,8 @@ module.exports = {
     url: "https://dariatsvetkova.ca",
     author: "Daria Tsvetkova",
     twitterUsername: "@daria_tsss",
-    ogImageSmall: "https://dariatsvetkova.ca/static/daria-tsvetkova-og-small.jpg",
-    ogImageLarge: "https://dariatsvetkova.ca/static/daria-tsvetkova-og-large.jpg",
+    ogImageSmall: "https://dariatsvetkova.ca/daria-tsvetkova-og-small.png",
+    ogImageLarge: "https://dariatsvetkova.ca/daria-tsvetkova-og-large.png",
     navigation: [
       {
         name: "Home",
