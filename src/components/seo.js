@@ -12,8 +12,7 @@ function SEO({ lang, meta, title, schema }) {
             title
             description
             url
-            ogImageSmall
-            ogImageLarge
+            ogImage
             author
           }
         }
@@ -55,18 +54,8 @@ function SEO({ lang, meta, title, schema }) {
         {
           property: `og:image`,
           type: `image/jpeg`,
-          width: `180`,
-          height: `110`,
           alt: `Daria Tsvetkova's portfolio website`,
-          content: site.siteMetadata?.ogImageSmall,
-        },
-        {
-          property: `og:image`,
-          type: `image/jpeg`,
-          width: `600`,
-          height: `314`,
-          alt: `Daria Tsvetkova's portfolio website`,
-          content: site.siteMetadata?.ogImageLarge,
+          content: site.siteMetadata?.ogImage,
         },
         {
           name: `twitter:card`,
