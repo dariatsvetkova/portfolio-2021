@@ -22,6 +22,10 @@ module.exports = {
             link: "/paintr",
           },
           {
+            name: "AvoCart",
+            link: "/avocart",
+          },
+          {
             name: "Game of Fifteen",
             link: "/gameof15",
           },
