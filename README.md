@@ -1,6 +1,13 @@
 # Portfolio website
 
-Made with Gatsby.js, Node.js, GraphQL, and lots of coffee.
+Made with:
+
+* Gatsby.js
+* Node.js
+* GraphQL
+* React
+* Scss
+* and lots of coffee.
 
 ## Installation and Setup Instructions
 
