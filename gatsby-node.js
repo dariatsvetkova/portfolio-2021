@@ -16,6 +16,7 @@ exports.sourceNodes = ({ actions }) => {
       number: String!
       previous: String
       role: String!
+      team: [Team]
       slug: String!
       stack: String
       tags: [String]!
@@ -26,6 +27,10 @@ exports.sourceNodes = ({ actions }) => {
     type Urls implements Node @dontInfer {
       code: String!
       live: String
+    }
+    type Team implements Node @dontInfer {
+      name: String!
+      link: String!
     }
   `)
 }
@@ -56,6 +61,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             title
             descr
             role
+            team {
+              name
+              link
+            }
             tags
             urls {
               code

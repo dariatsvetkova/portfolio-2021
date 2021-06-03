@@ -36,13 +36,37 @@ const ProjectTemplate = ({ pageContext, data }) => {
           <p>{project.descr}</p>
           <div className={styles.column}>
             <h2 className={styles.columnTitle}>My role</h2>
-            <p>{project.role}</p>
+            <p>
+              {project.role}
+              {project.team &&
+                <>
+                  {' '}
+                  {project.team.map((mate, index) => {
+                    return (
+                      <>
+                        {index > 0 && <span>, </span>}
+                        <a 
+                          key={`mate-${index}`}
+                          className="textLink"
+                          href={mate.link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {mate.name}
+                        </a>
+                      </>
+                    );
+                  }
+                  )}
+                </>
+              }
+            </p>
           </div>
           <div className={styles.column}>
             <h2 className={styles.columnTitle}>Stack</h2>
             <div>
               {project.tags.map((tag, index) => 
-                <span key={index} className="stackTag">{tag}</span>
+                <span key={`stack-${index}`} className="stackTag">{tag}</span>
               )}
             </div>
           </div>

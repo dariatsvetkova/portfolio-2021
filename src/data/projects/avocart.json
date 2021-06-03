@@ -7,7 +7,21 @@
   "descr": 
     "A smart shopping list that learns your buying habits and helps you remember what you need to buy on your next trip to the store.",
   "role": 
-    "¼ of the developer team",
+    "Member of the developer team along with",
+  "team": [
+    {
+      "name": "Abby Benjamin",
+      "link": "https://github.com/ablizben"
+    },
+    {
+      "name": "Caitlin Floyd",
+      "link": "https://github.com/cafloyd"
+    },
+    {
+      "name": "Karan Katoch",
+      "link": "https://github.com/kkatoch89"
+    }
+  ],
   "tags": ["React", "Firebase", "Material UI", "Styled Components"],
   "urls": {
     "code": "https://github.com/the-collab-lab/tcl-22-smart-shopping-list",
@@ -17,7 +31,7 @@
   "why": 
     "This project was built during my internship at The Collab Lab, an organization that helps early-career developers gain practical experience through working on real-life projects. The main focus of this project was on collaboration within a remote developer team, technical communication, and the Agile approach to software development.",
   "stack":
-    "This app helps a user keep track of their grocery purchases and over time learns to predict what they will need to buy at their next grocery shopping trip. We used Firebase to store the list data on the backend. The frontend was built with React because it allowed us to easily track the state of individual items on the list. React Hooks also made it easy to interact with the database. We chose to style our app with Material UI to take advantage of its ready-to-use components; for the components that weren’t a part of Material UI, we used Styled Components for flexible styling and animation.",
+    "We used Firebase to store the list data on the backend. The frontend was built with React because it allowed us to easily track the state of individual items on the list. React Hooks also made it easy to interact with the database. We chose to style our app with Material UI to take advantage of its ready-to-use components; for the components that weren’t a part of Material UI, we used Styled Components for flexible styling and animation.",
   "challenges": 
     "A large part of this project involved operations with dates: displaying dates, sorting dates, using dates in calculations. The dates that we used across the project came in different formats: objects in Firebase, values in milliseconds in some functions, values in days in others. This created a level of complexity that we hadn't anticipated but were able to solve with a combination of plain math and a library that unified formats and simplified the calculations.",
   "lessons": 
