@@ -8,21 +8,21 @@ exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
     type ProjectsJson implements Node @dontInfer {
       id: ID!
-      challenges: String!
+      challenges: String
       descr: String!
       embed: String
-      lessons: String!
+      lessons: String
       next: String
       number: String!
       previous: String
-      role: String!
+      role: String
       team: [Team]
-      slug: String!
+      slug: String
       stack: String
       tags: [String]!
       title: String!
       urls: Urls
-      why: String!
+      why: String
     }
     type Urls implements Node @dontInfer {
       code: String!
@@ -91,13 +91,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const projects = queryResult.data.allProjectsJson.edges
   
   projects.forEach(project => {
-    createPage({
-      path: project.node.slug,
-      component: path.resolve(`./src/templates/project.js`),
-      context: {
-        project: project.node,
-        slug: project.node.slug.slice(1),
-      },
-    })
+    if (project.node.slug) {
+      createPage({
+        path: project.node.slug,
+        component: path.resolve(`./src/templates/project.js`),
+        context: {
+          project: project.node,
+          slug: project.node.slug.slice(1),
+        },
+      })
+    }
   })
 }

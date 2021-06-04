@@ -202,3 +202,22 @@
     }
   } 
 }
+
+.wip {
+  background: $DT-light-grey;
+  
+  & > *:hover,
+  & > *:focus {
+    color: $DT-black;
+  
+    h4 {
+      color: $DT-black;
+    }
+  
+    .projectImg {
+      img {
+        transform: none;
+      }
+    }
+  }  
+}

@@ -5,9 +5,12 @@ const ProjectIndex = (props) => {
   return (
     <ul>
       {props.projects.map(project => {
-        const shortSlug = project.node.slug.slice(1)
+        const shortSlug = 
+          project.node.slug
+          ? project.node.slug.slice(1)
+          : project.node.title.toLowerCase().split(" ").join("");
 
-        const imgFile = props.images.filter(image => {
+        const imgFiles = props.images.filter(image => {
           const path = image.node.parent.relativePath.split("/")[0]
           return path === shortSlug
         })
@@ -16,7 +19,7 @@ const ProjectIndex = (props) => {
           <ProjectCard 
             key={shortSlug.toString()}
             project={project.node}
-            imgFile={imgFile}
+            imgFiles={imgFiles}
           />
         )
       })}

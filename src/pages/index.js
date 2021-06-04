@@ -96,7 +96,19 @@ const IndexPage = ({ data }) => {
         <section id="projects" className={`${styles.sectionHome} ${styles.projects}`}>
           <h3>Projects</h3>
           <ProjectIndex 
-            projects={data.allProjects.edges}
+            projects={data.allProjects.edges.filter(project => {
+              return !(!project.node.slug)
+            })}
+            images={data.allImages.edges}
+          />
+        </section>
+
+        <section className={`${styles.sectionHome} ${styles.projects} ${styles.wip}`}>
+          <h3>Work in Progress</h3>
+          <ProjectIndex
+            projects={data.allProjects.edges.filter(project => {
+              return !project.node.slug
+            })}
             images={data.allImages.edges}
           />
         </section>

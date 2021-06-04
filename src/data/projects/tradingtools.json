@@ -1,0 +1,7 @@
+{
+  "number": 6,
+  "title": "Trading Tools",
+  "descr": 
+    "I'm currently building an online calculator of stock prices and share sizes for a freelance project. Stay tuned for more info!",
+  "tags": ["React", "Redux", "TypeScript", "Styled Components"]
+}
