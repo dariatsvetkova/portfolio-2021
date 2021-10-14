@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: `Daria Tsvetkova \/\/ Front-End Developer`,
-    description: `Daria Tsvetkova is a front-end developer and musician based in Toronto, Canada. Learn more about her experience, skills and projects.`,
+    title: `Daria Tsvetkova \/\/ Software Developer`,
+    description: `Daria Tsvetkova is a software developer and musician based in Toronto, Canada. Learn more about her experience, skills and projects.`,
     url: "https://dariatsvetkova.ca",
     author: "Daria Tsvetkova",
     twitterUsername: "@daria_tsss",
