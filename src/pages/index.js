@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
           </div>
           <div className={styles.articleRight}>
             <p>Fast forward to the 2020 pandemic: I decided to use the time in quarantine to flex my programming muscles again and learn some modern languages. I picked up JavaScript, built a couple of websites, and watched a growing number of people use them every day. I learned that web development was an apt way to channel my creativity into useful products.</p>
-            <p>Currently, I am working as a Full-Stack Developer at <a className="textLink" href="https://www.linkedin.com/in/daria-tsvetkova/" target="_blank" rel="noreferrer">Code Busters</a>, where I build web applications and contribute to developer education materials focused on React and Firebase.</p>
+            <p>Currently, I am working as a Full-Stack Developer at <a className="textLink" href="http://codebusters.ca/" target="_blank" rel="noreferrer">Code Busters</a>, where I build web applications and contribute to developer education materials focused on React and Firebase.</p>
           </div>
         </section>
 
