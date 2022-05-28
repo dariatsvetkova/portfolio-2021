@@ -30,10 +30,6 @@ module.exports = {
             link: "/gameof15",
           },
           {
-            name: "Clap Card",
-            link: "/clapcard",
-          },
-          {
             name: "Tap Tempo",
             link: "/taptempo",
           },
