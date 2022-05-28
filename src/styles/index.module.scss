@@ -163,33 +163,21 @@
 
     li {
       margin-left: 1em;
+      margin-right: 1em;
     }
 
     @include grid {
       grid-row: 3/4;
       grid-column: 3/13;
+      width: 100%;
       display: flex;
       flex-flow: column wrap;
       max-height: 10em;
-      justify-content: space-between;
-      align-items: flex-start;
-
-      li:nth-child(n+5):nth-child(-n+8) {
-        margin-left: 10em;
-        margin-right: 2em;
-      }
+      justify-content: flex-start;
+      align-items: stretch;
 
       @include tablet {
-        max-height: 15em;
-
-        li:nth-child(n+5):nth-child(-n+6) {
-          margin-left: 1em;
-          margin-right: 0; 
-        }
-        li:nth-child(n+7):nth-child(-n+12) {
-          margin-left: 5em;
-          margin-right: 0;
-        }
+        max-height: 20em;
       }
     }
   }

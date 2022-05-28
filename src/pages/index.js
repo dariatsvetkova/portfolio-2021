@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
     "@context": "https://schema.org/",
     "@type": "Person",
     "name": "Daria Tsvetkova",
-    "description": "Daria Tsvetkova is a front-end developer and musician based in Toronto, Canada.",
+    "description": "Daria Tsvetkova is a software developer and musician based in Toronto, Canada.",
     "url": "https://dariatsvetkova.ca/",
     "image": "https://dariatsvetkova.ca/static/daria-tsvetkova-schema.jpg",
     "sameAs": [
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
       "https://soundcloud.com/liuthsounds",
       "https://www.instagram.com/liuth.sounds/"
     ],
-    "jobTitle": "Web Developer and Musician"
+    "jobTitle": "Software Developer and Musician"
   }
 
   return (
@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
           <Social classes="socialIconsVertical"/>
         </nav>
         <h2>
-          <span>&#47;&#47; front-end developer</span>
+          <span>&#47;&#47; software developer</span>
           <span>&#47;&#47; musician</span>
           <span>&#47;&#47; creative thinker</span>
         </h2>
@@ -50,6 +50,7 @@ const IndexPage = ({ data }) => {
           src="../data/images/daria-tsvetkova.png"
           quality={100}
           loading="eager"
+          placeholder="tracedSVG"
           objectFit="contain"
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Daria Tsvetkova, web developer and musician from Toronto"
@@ -70,7 +71,7 @@ const IndexPage = ({ data }) => {
           </div>
           <div className={styles.articleRight}>
             <p>Fast forward to the 2020 pandemic: I decided to use the time in quarantine to flex my programming muscles again and learn some modern languages. I picked up JavaScript, built a couple of websites, and watched a growing number of people use them every day. I learned that web development was an apt way to channel my creativity into useful products.</p>
-            <p>Currently, I am <a className="textLink" href="https://www.linkedin.com/in/daria-tsvetkova/" target="_blank" rel="noreferrer">looking for full-time opportunities</a> in front-end development. I’m eager to learn from experienced developers and to apply my skills to help the right business grow.</p>
+            <p>Currently, I am working as a Full-Stack Developer at <a className="textLink" href="http://codebusters.ca/" target="_blank" rel="noreferrer">Code Busters</a>, where I build web applications and contribute to developer education materials focused on React and Firebase.</p>
           </div>
         </section>
 
@@ -80,11 +81,15 @@ const IndexPage = ({ data }) => {
           <ul>
             <li>HTML</li>
             <li>CSS, Scss</li>
+            <li>styled-components</li>
+            <li>Tailwind CSS</li>
+            <li>Material UI</li>
             <li>JavaScript</li>
             <li>React</li>
             <li>Gatsby.js</li>
             <li>Node.js</li>
-            <li>Version control, Git & GitHub</li>
+            <li>Firebase</li>
+            <li>Git & GitHub</li>
             <li>WordPress</li>
             <li>Adobe Photoshop</li>
             <li>Figma</li>
