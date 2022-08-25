@@ -12,11 +12,13 @@ const ProjectCard = (props) => {
       <small className={styles.numCard}>{number < 10 ? "0" + number : number}</small>
       <h4>{title}</h4>
 
-      <GatsbyImage
-        className={styles.projectImg}
-        image={getImage(props.imgFiles[0].node)}
-        alt={`${title} project screenshot`}
-      />
+      {props.imgFiles.length ? (
+        <GatsbyImage
+          className={styles.projectImg}
+          image={getImage(props.imgFiles[0].node)}
+          alt={`${title} project screenshot`}
+        />
+      ) : null}
 
       <p className={styles.descr}>{descr} <span className={`textLink ${styles.moreLink}`}>Learn more</span></p>
       <div className={styles.stackTags}>

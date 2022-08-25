@@ -18,6 +18,10 @@ module.exports = {
         link: "/#projects",
         subnav: [
           {
+            name: "React Firebase Starter",
+            link: "/starter",
+          },
+          {
             name: "Paintr",
             link: "/paintr",
           },

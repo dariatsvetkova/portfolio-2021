@@ -1,10 +1,11 @@
 {
-  "number": 1,
+  "number": 2,
   "title": "Paintr",
   "slug": "/paintr",
+  "previous": "/react-firebase-starter",
   "next": "/avocart",
   "descr": 
-    "A web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.",
+    "Personal project: a web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.",
   "role": 
     "Idea, design and development",
   "tags": ["React", "JavaScript", "HTML", "CSS"],

@@ -1,10 +1,10 @@
 {
-  "number": 4,
+  "number": 5,
   "title": "Tap Tempo",
   "slug": "/taptempo",
   "previous": "/gameof15",
   "descr": 
-    "A beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month.",
+    "Personal project: a beats-per-minute calculator with a colourful design, used by hundreds of music professionals every month.",
   "role": 
     "Design, development, SEO",
   "tags": ["JavaScript", "jQuery", "HTML", "CSS", "SVG graphics"],
