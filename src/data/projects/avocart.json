@@ -1,11 +1,11 @@
 {
-  "number": 2,
+  "number": 3,
   "title": "AvoCart",
   "slug": "/avocart",
   "previous": "/paintr",
   "next": "/gameof15",
   "descr": 
-    "A smart shopping list that learns your buying habits and helps you remember what you need to buy on your next trip to the store.",
+    "Build for The Collab Lab: a smart shopping list that learns your buying habits and helps you remember what you need to buy on your next trip to the store.",
   "role": 
     "Member of the developer team along with",
   "team": [

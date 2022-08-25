@@ -1,0 +1,22 @@
+{
+  "number": 1,
+  "title": "React Firebase Starter",
+  "slug": "/starter",
+  "next": "/paintr",
+  "descr": 
+    "Built for CodeBusters: an open-source starter repo for creating web apps with Firebase and React, complete with a setup script that takes the pain out of initializing a new Firebase project.",
+  "role": 
+    "Main contributor",
+  "tags": ["React", "Firebase", "Webpack", "Tailwind", "React Router", "React Helmet", "Mocha"],
+  "urls": {
+    "code": "https://github.com/codebusters-ca/react-firebase-starter"
+  },
+  "why": 
+    "I created this project as a part of my job at CodeBusters, a software development agency that works predominantly with startups. We often build MVPs using Firebase, so this project was created as a way of optimizing the development process for ourselves and other Firebase enthusiasts in the developer community.",
+  "stack":
+    "The stack choices are a common denominator of our client projects. Here, we used Webpack as a configurable low-level bundler that can be easily adapted to the needs of each project. Tailwind UI saves us countless hours of design work and writing CSS from scratch. Mocha is used for testing Firestore security rules, automated with GitHub Actions. Scripts are written in Node.js for easy development and maintenance.",
+  "challenges": 
+    "When I work on an app, I typically think about it from the user’s perspective and focus on their experience. But in this project, I had to think about how other developers might want to use the code I was writing. I did my best to make it as generic as possible while still providing all of the key features out of the box.",
+  "lessons": 
+    "This project gave me my first experience setting up a Webpack config from scratch. It took some trial and error, but I’ve grown to appreciate the flexibility of this tool. I also gained a better understanding of writing asynchronous scripts in Node.js, which will help me further improve internal tools at my workplace."
+}
