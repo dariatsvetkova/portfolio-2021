@@ -4,7 +4,7 @@
   "slug": "/starter",
   "next": "/paintr",
   "descr": 
-    "Built for CodeBusters: an open-source starter repo for creating web apps with Firebase and React, complete with a setup script that takes the pain out of initializing a new Firebase project.",
+    "Built for CodeBusters: an open-source starter repo for creating web apps with Firebase and React, complete with a setup script that replaces the 8-step process of initializing a new Firebase project.",
   "role": 
     "Main contributor",
   "tags": ["React", "Firebase", "Webpack", "Tailwind", "React Router", "React Helmet", "Mocha"],
