@@ -67,7 +67,7 @@
       
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-          animation-delay: $delay * (2 + $i / 3);
+          animation-delay: $delay * (2 + calc($i / 3));
         }
       }
     }

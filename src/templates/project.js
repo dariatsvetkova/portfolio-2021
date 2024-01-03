@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import * as styles from "../styles/project.module.scss"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
 
 const ProjectTemplate = ({ pageContext, data }) => {
@@ -21,7 +21,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title={`${project.title} Project Info`} />
+      <Seo title={`${project.title} Project Info`} />
 
       <header className={styles.headerPage}>
         <nav>

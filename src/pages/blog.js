@@ -2,12 +2,12 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { BsArrowLeft } from "react-icons/bs"
 
 const Blog = () => (
   <Layout>
-    <SEO title="Blog coming soon..." />
+    <Seo title="Blog coming soon..." />
     <article
       style={{
         padding: "3em",
