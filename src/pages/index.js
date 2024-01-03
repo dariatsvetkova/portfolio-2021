@@ -6,7 +6,7 @@ import ProjectIndex from "../components/projectIndex"
 import * as styles from "../styles/index.module.scss";
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Social from "../components/social"
 
 const IndexPage = ({ data }) => {
@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO 
+      <Seo 
         title="Home"
         schema={schema}
       />
@@ -41,9 +41,9 @@ const IndexPage = ({ data }) => {
           <Social classes="socialIconsVertical"/>
         </nav>
         <h2>
-          <span>&#47;&#47; software developer</span>
-          <span>&#47;&#47; musician</span>
-          <span>&#47;&#47; creative thinker</span>
+          <span>&#47;&#47; software engineer</span>
+          <span>&#47;&#47; life-long learner</span>
+          <span>&#47;&#47; privacy enthusiast</span>
         </h2>
         <StaticImage
           className={styles.heroImage}
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
           placeholder="tracedSVG"
           objectFit="contain"
           formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Daria Tsvetkova, web developer and musician from Toronto"
+          alt="Daria Tsvetkova, Software Engineer from Toronto, Canada"
         />
         <p className={styles.btnContainer}>
           <a className="btn" href="/#projects">
@@ -66,16 +66,16 @@ const IndexPage = ({ data }) => {
         <section className={`${styles.sectionHome} ${styles.about}`}>
           <h3>About Me</h3>
           <div className={styles.articleLeft}>
-            <p>A friend once described me as a throwback to the Renaissance era. While not nearly so old, I do enjoy creativity in its various forms: <a className="textLink" href="https://open.spotify.com/artist/4KtK51Svc4byjd4FGqroQy" target="_blank" rel="noreferrer">music</a>, design, <a className="textLink" href="https://ko-fi.com/dariascananigans/posts" target="_blank" rel="noreferrer">creative writing</a>, and, most of all, programming.</p>
-            <p>My experience with programming started in middle school computer classes, where I learned Turbo Pascal and Delphi, and built elaborate text quests, a cockroach race game, and my first functioning website with an HTML table layout.</p>
+            <p>In 13 years of my professional life, I have gone from analyzing marketing data for a pharmaceutical corporation to managing well-known brands, creating digital strategies and tools and finally, building software.</p>
+            <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals. Currently, I am studying Computer Science at Toronto Metropolitan University.</p>
           </div>
           <div className={styles.articleRight}>
-            <p>Fast forward to the 2020 pandemic: I decided to use the time in quarantine to flex my programming muscles again and learn some modern languages. I picked up JavaScript, built a couple of websites, and watched a growing number of people use them every day. I learned that web development was an apt way to channel my creativity into useful products.</p>
-            <p>Currently, I am working as a Full-Stack Developer at <a className="textLink" href="http://codebusters.ca/" target="_blank" rel="noreferrer">Code Busters</a>, where I build web applications and contribute to developer education materials focused on React and Firebase.</p>
+            <p>My main professional interest is using technology to solve business problems. As a Full Stack Engineer, I specialize in backend development with NodeJS and Python and frontend development with React and Vue. I am also working on my skills in online privacy and secure handling of personal data.</p>
+            <p>Both at work and in my free time, I enjoy creativity in its various forms: programming, <a className="textLink" href="https://open.spotify.com/artist/4KtK51Svc4byjd4FGqroQy" target="_blank" rel="noreferrer">music</a>, fashion, and <a className="textLink" href="https://ko-fi.com/dariascananigans/posts" target="_blank" rel="noreferrer">creative writing</a>. You can also spot me at a local chess club, embarrassingly losing to 8-year-olds.</p>
           </div>
         </section>
 
-        <section className={`${styles.sectionHome} ${styles.skills}`}>
+        {/* <section className={`${styles.sectionHome} ${styles.skills}`}>
           <h3>Skills</h3>
           <p>I am a self-taught developer. I gained my knowledge through courses on Lynda, freeCodeCamp, YouTube and other platforms. I am also lucky to have been mentored by senior developers from my network who guided my learning process and reviewed my code.</p>
           <ul>
@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
             <li>Google Analytics</li>
             <li>Search Engine Optimization</li>
           </ul>
-        </section>
+        </section> */}
 
         <section id="projects" className={`${styles.sectionHome} ${styles.projects}`}>
           <h3>Projects</h3>
