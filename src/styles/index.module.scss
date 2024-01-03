@@ -146,41 +146,8 @@
   }
 }
 
-.skills {
+.recos {
   background: $DT-light-grey;
-
-  p {
-    text-align: justify;
-
-    @include grid {
-      grid-row: 2/3;
-      grid-column: 3/13;
-    }
-  }
-
-  ul {
-    list-style: "\2022\00A0\00A0" outside;
-
-    li {
-      margin-left: 1em;
-      margin-right: 1em;
-    }
-
-    @include grid {
-      grid-row: 3/4;
-      grid-column: 3/13;
-      width: 100%;
-      display: flex;
-      flex-flow: column wrap;
-      max-height: 10em;
-      justify-content: flex-start;
-      align-items: stretch;
-
-      @include tablet {
-        max-height: 20em;
-      }
-    }
-  }
 }
 
 .projects {

@@ -8,6 +8,7 @@ import * as styles from "../styles/index.module.scss";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Social from "../components/social"
+import Carousel from "../components/carousel";
 
 const IndexPage = ({ data }) => {
 
@@ -42,7 +43,7 @@ const IndexPage = ({ data }) => {
         </nav>
         <h2>
           <span>&#47;&#47; software engineer</span>
-          <span>&#47;&#47; life-long learner</span>
+          <span>&#47;&#47; lifelong learner</span>
           <span>&#47;&#47; privacy enthusiast</span>
         </h2>
         <StaticImage
@@ -75,27 +76,9 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        {/* <section className={`${styles.sectionHome} ${styles.skills}`}>
-          <h3>Skills</h3>
-          <p>I am a self-taught developer. I gained my knowledge through courses on Lynda, freeCodeCamp, YouTube and other platforms. I am also lucky to have been mentored by senior developers from my network who guided my learning process and reviewed my code.</p>
-          <ul>
-            <li>HTML</li>
-            <li>CSS, Scss</li>
-            <li>styled-components</li>
-            <li>Tailwind CSS</li>
-            <li>Material UI</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Gatsby.js</li>
-            <li>Node.js</li>
-            <li>Firebase</li>
-            <li>Git & GitHub</li>
-            <li>WordPress</li>
-            <li>Adobe Photoshop</li>
-            <li>Figma</li>
-            <li>Google Analytics</li>
-            <li>Search Engine Optimization</li>
-          </ul>
+        {/* <section className={`${styles.sectionHome} ${styles.recos}`}>
+          <h3>My Teammates Say…</h3>
+          <Carousel recos={data.allRecos.edges} />
         </section> */}
 
         <section id="projects" className={`${styles.sectionHome} ${styles.projects}`}>
@@ -156,6 +139,19 @@ export const data = graphql`
           }
         }
       }
-    }  
+    }
+    allRecos: allRecommendationsJson {
+      edges {
+        node {
+          id
+          from {
+            name
+            relation
+            company
+          }
+          text
+        }
+      }
+    }
   }
 `

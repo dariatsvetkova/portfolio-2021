@@ -32,6 +32,16 @@ exports.sourceNodes = ({ actions }) => {
       name: String!
       link: String!
     }
+    type Reco implements Node @dontInfer {
+      id: ID!
+      from: Person!
+      text: String!
+    }
+    type Person implements Node @dontInfer {
+      name: String!
+      relation: String!
+      company: String!
+    }
   `)
 }
 
