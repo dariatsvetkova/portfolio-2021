@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "../styles/project.module.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
+import { ArrowLeft, ArrowRight } from "../components/icons"
 
 const ProjectTemplate = ({ pageContext, data }) => {
 
@@ -25,7 +25,12 @@ const ProjectTemplate = ({ pageContext, data }) => {
 
       <header className={styles.headerPage}>
         <nav>
-          <Link className="textLink" to="/"><span className={`icon ${styles.arrow}`}><BsArrowLeft /></span>Back</Link>
+          <Link className="textLink" to="/">
+            <span className={`icon ${styles.arrow}`}>
+              <ArrowLeft />
+            </span>
+            Back
+          </Link>
         </nav>
         <p className={styles.numHeader}>{project.number < 10 ? "0" + project.number : project.number}</p>
         <h1>{project.title}</h1>
@@ -165,14 +170,18 @@ const ProjectTemplate = ({ pageContext, data }) => {
         <nav className={styles.prevNext}>
           {project.previous && 
             <Link className={`textLink ${styles.prev}`} to={project.previous}>
-                <span className={`icon ${styles.arrow}`}><BsArrowLeft /></span>
+                <span className={styles.arrow}>
+                  <ArrowLeft />
+                </span>
                 Previous project
             </Link>
           }
           {project.next && 
             <Link className={`textLink ${styles.next}`} to={project.next}>
                 Next project
-                <span className={`icon ${styles.arrow}`}><BsArrowRight /></span>
+                <span className={styles.arrow}>
+                  <ArrowRight />
+                </span>
             </Link>
           }
         </nav>
