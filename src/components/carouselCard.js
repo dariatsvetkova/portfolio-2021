@@ -1,4 +1,6 @@
 import * as React from "react"
+import { ArrowLeft, ArrowRight } from "../components/icons";
+
 import * as styles from "../styles/carouselCard.module.scss"
 
 const CarouselCard = (props) => {
@@ -26,18 +28,30 @@ const CarouselCard = (props) => {
       tabindex="0"
       className={styles.card}
     >
-      <div className="carouselArrows">
-        <a href={prevId} className="carouselPrev">
-          {prevText}
+      <div className={styles.carouselArrows}>
+        <a
+          href={prevId}
+          className="carouselPrev"
+          ariaLabel={prevText}
+        >
+          <ArrowLeft />
         </a>
-        <a href={nextId} className="carouselNext">
-          {nextText}  
+
+        <a
+          href={nextId}
+          className="carouselNext"
+          ariaLabel={nextText}
+        >
+          <ArrowRight />
         </a>
       </div>
 
-      <p>{props.ind}</p>
-      <p className={styles.text}>{text}</p>
-      <small className={styles.from}>— {name}, {relation} at {company}</small>
+      <div className={styles.textContainer}>
+        <p className={styles.text}>{text}</p>
+        <p className={styles.from}>
+          <small>— {name}, {relation} at {company}</small>
+        </p>
+      </div>
     </li>
   )  
 }

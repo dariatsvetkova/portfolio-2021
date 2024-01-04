@@ -2,13 +2,13 @@
 
 .carouselContainer {
   position: relative;
-  padding-top: 75%;
-  // filter: drop-shadow(0 0 10px #0003);
+  padding-top: 55vh;
   perspective: 100px;
+  margin-top: -7.852em;
 
   @include grid {
     grid-row: 2/3;
-    grid-column: 2/14;
+    grid-column: 5/11;
     width: 100%;
   }
 }
@@ -19,8 +19,10 @@
   right: 0;
   bottom: 0;
   left: 0;
+  margin-top: 7.852em;
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   counter-reset: item;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
