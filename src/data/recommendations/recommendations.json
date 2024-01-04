@@ -1,6 +1,30 @@
 [
   {
     "from": {
+      "name": "Thom",
+      "relation": "CEO and Principal Engineer",
+      "company": "CodeBusters"
+    },
+    "text": "Daria's diverse experience makes her an invaluable asset as a client-facing engineer capable of balancing sales, presentation skills and the ability to explain technical concepts in an accessible way."
+  },
+  {
+    "from": {
+      "name": "Karan",
+      "relation": "teammate",
+      "company": "The Collab Lab"
+    },
+    "text": "While Daria's skills as a developer and ability to quickly pick up technical skills are clearly amazing, it's her ability to critically assess problems and present them in a succinct manner that sets her apart."
+  },
+  {
+    "from": {
+      "name": "Thom",
+      "relation": "CEO and Principal Engineer",
+      "company": "CodeBusters"
+    },
+    "text": "One of Daria's strengths is being self-aware enough to accept feedback without ego and put the team's needs first by being fair and humble."
+  },
+  {
+    "from": {
       "name": "Lauren",
       "relation": "mentor",
       "company": "The Collab Lab"
@@ -17,22 +41,6 @@
   },
   {
     "from": {
-      "name": "Karan",
-      "relation": "teammate",
-      "company": "The Collab Lab"
-    },
-    "text": "While Daria's skills as a developer and ability to quickly pick up technical skills are clearly amazing, it's her ability to critically assess problems and present them in a succinct manner that sets her apart."
-  },
-  {
-    "from": {
-      "name": "Thom",
-      "relation": "CEO and Principal Engineer",
-      "company": "CodeBusters"
-    },
-    "text": "Daria's diverse experience makes her an invaluable asset as a client-facing engineer capable of balancing sales, presentation skills and the ability to explain technical concepts in an accessible way."
-  },
-  {
-    "from": {
       "name": "Caitlin",
       "relation": "teammate",
       "company": "The Collab Lab"
@@ -45,23 +53,7 @@
       "relation": "CEO and Principal Engineer",
       "company": "CodeBusters"
     },
-    "text": "Daria possesses the crucial skills of a small company employee: the ability to self-manage and to continue making an impact while keeping track of changing priorities."
-  },
-  {
-    "from": {
-      "name": "Caitlin",
-      "relation": "teammate",
-      "company": "The Collab Lab"
-    },
-    "text": "Whenever our team was in need of direction, Daria always stepped up to guide us toward our goals."
-  },
-  {
-    "from": {
-      "name": "Thom",
-      "relation": "CEO and Principal Engineer",
-      "company": "CodeBusters"
-    },
-    "text": "Daria possesses crucial skills of a small company employee: the ability to self-manage and to continue making an impact while keeping track of changing priorities."
+    "text": "Daria possesses crucial skills for a small company employee: the ability to self-manage and to continue making an impact while keeping track of changing priorities."
   },
   {
     "from": {
@@ -70,13 +62,5 @@
       "company": "The Collab Lab"
     },
     "text": "Daria's 'MVP' status of our group is a true testament to her outstanding work ethic and critical thinking."
-  },
-  {
-    "from": {
-      "name": "Thom",
-      "relation": "CEO and Principal Engineer",
-      "company": "CodeBusters"
-    },
-    "text": "One of Daria's strengths is being self-aware enough to accept feedback without ego and put the team's needs first by being fair and humble."
   }
 ]
