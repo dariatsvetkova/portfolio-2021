@@ -76,10 +76,10 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        {/* <section className={`${styles.sectionHome} ${styles.recos}`}>
+        <section className={`${styles.sectionHome} ${styles.recos}`}>
           <h3>My Teammates Say…</h3>
           <Carousel recos={data.allRecos.edges} />
-        </section> */}
+        </section>
 
         <section id="projects" className={`${styles.sectionHome} ${styles.projects}`}>
           <h3>Projects</h3>
