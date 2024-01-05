@@ -1,5 +1,8 @@
 @import "variables";
 
+$mobile-top-offset: 20%;
+$mobile-side-offset: 10%;
+
 .leftGradient,
 .rightGradient {
   @include grid {
@@ -8,9 +11,6 @@
   }
 
   @include mobile {
-    display: none;
-  }
-  @include tablet {
     display: none;
   }
 }
@@ -29,38 +29,41 @@
   }
 }
 
-.carouselPrevBtn,
-.carouselNextBtn {
-  width: max-content;
-  height: max-content;
-  justify-self: center;
-  align-self: center;
-  background: none;
-  color: $DT-accent-dark;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: none;
-    color: $DT-accent;
-  }
-
+.buttonContainer {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @include grid {
     grid-row: 2/3;
-    z-index: 2;
+    grid-column: 3/13;
   }
-}
 
-.carouselPrevBtn {
-  @include grid {
-    grid-column: 2/5;
+  @include mobile {
+    position: absolute;
+    height: calc(100% - $mobile-top-offset - $mobile-side-offset);
+    top: $mobile-top-offset;
+    left: 0;
+    padding: 0 1em;
   }
-}
 
-.carouselNextBtn {
-  @include grid {
-    grid-column: 11/14;
+  button {
+    width: max-content;
+    height: max-content;
+    justify-self: center;
+    align-self: center;
+    background: none;
+    color: $DT-accent-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+      color: $DT-accent;
+    }
   }
 }
 
@@ -82,7 +85,7 @@
   }
 
   @include mobile {
-     min-height: 40vh;
+    min-height: 40vh;
   }
 }
 
@@ -96,6 +99,14 @@
     grid-column: 5/11;
   }
 
+  @include mobile {
+    width: calc(100% - 2 * $mobile-side-offset);
+    height: calc(100% - $mobile-top-offset - 5%);
+    position: absolute;
+    top: $mobile-top-offset;
+    left: $mobile-side-offset;
+  }
+
   &:before,
   &:after {
     position: absolute;
@@ -104,14 +115,6 @@
     font-weight: 500;
     font-size: 82px;
     line-height: 50%;
-
-  // @include tablet {
-    //   font-size: 3.55vw;
-    // }
-
-  // @include mobile {
-    //   font-size: 6.563vw;
-    // }
   }
 
   &:before {

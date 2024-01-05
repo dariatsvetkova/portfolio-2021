@@ -59,15 +59,22 @@ const Carousel = (props) => {
   return (
     <>
       <div className={styles.background} />
-
       <div className={styles.leftGradient} />
-      <button
-        className={styles.carouselPrevBtn}
-        aria-label={prevText}
-        onClick={handlePrev}
-      >
-        <ArrowLeft />
-      </button>
+
+      <div className={styles.buttonContainer}>
+        <button
+          aria-label={prevText}
+          onClick={handlePrev}
+        >
+          <ArrowLeft />
+        </button>
+        <button
+          aria-label={nextText}
+          onClick={handleNext}
+        >
+          <ArrowRight />
+        </button>
+      </div>
 
       <ul className={styles.carousel}>
         <CarouselCard empty />
@@ -84,13 +91,6 @@ const Carousel = (props) => {
       </ul>
 
       <div className={styles.rightGradient} />
-      <button
-        className={styles.carouselNextBtn}
-        aria-label={nextText}
-        onClick={handleNext}
-      >
-        <ArrowRight />
-      </button>
     </>
   )
 }
