@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
         <section className={`${styles.sectionHome} ${styles.about}`}>
           <h3>About Me</h3>
           <div className={styles.articleLeft}>
-            <p>In 13 years of my professional life, I have gone from analyzing marketing data for a pharmaceutical corporation to managing well-known brands, creating digital strategies and tools and finally, building software.</p>
+            <p>In {new Date().getFullYear() - 2011} years of my professional life, I have gone from analyzing marketing data for a pharmaceutical corporation to managing well-known brands, creating digital strategies and tools and finally, building software.</p>
             <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals. Currently, I am studying Computer Science at Toronto Metropolitan University.</p>
           </div>
           <div className={styles.articleRight}>
@@ -76,10 +76,10 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section className={`${styles.sectionHome} ${styles.recos}`}>
+        {/* <section className={`${styles.sectionHome} ${styles.recos}`}>
           <h3>My Teammates Say…</h3>
           <Carousel recos={data.allRecos.edges} />
-        </section>
+        </section> */}
 
         <section id="projects" className={`${styles.sectionHome} ${styles.projects}`}>
           <h3>Projects</h3>
@@ -91,7 +91,7 @@ const IndexPage = ({ data }) => {
           />
         </section>
 
-        <section className={`${styles.sectionHome} ${styles.projects} ${styles.wip}`}>
+        <section id="wip" className={`${styles.sectionHome} ${styles.projects} ${styles.wip}`}>
           <h3>Work in Progress</h3>
           <ProjectIndex
             projects={data.allProjects.edges.filter(project => {

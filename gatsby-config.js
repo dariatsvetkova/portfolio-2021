@@ -17,24 +17,16 @@ module.exports = {
         link: "/#projects",
         subnav: [
           {
+            name: "FormBuster",
+            link: "/formbuster",
+          },
+          {
             name: "React Firebase Starter",
             link: "/starter",
           },
           {
             name: "Paintr",
             link: "/paintr",
-          },
-          {
-            name: "AvoCart",
-            link: "/avocart",
-          },
-          {
-            name: "Game of Fifteen",
-            link: "/gameof15",
-          },
-          {
-            name: "Tap Tempo",
-            link: "/taptempo",
           },
         ]
       },

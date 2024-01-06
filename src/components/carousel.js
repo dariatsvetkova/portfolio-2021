@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { ArrowLeft, ArrowRight } from "../components/icons";
 import CarouselCard from "./carouselCard"
 
@@ -21,6 +21,7 @@ const getButtonText = (currentInd, lastInd) => {
 const Carousel = (props) => {
   const recos = props.recos
   const lastInd = recos.length - 1
+  const carouselRef = useRef(null);
 
   const [currentSlide, setCurrentSlide] = useState(Math.floor(lastInd / 2))
 
@@ -44,15 +45,43 @@ const Carousel = (props) => {
   const childrenRefs = recos.map(_ => React.createRef())
 
   useEffect(() => {
-    const currentRecoRef = childrenRefs[currentSlide]
-    if (currentRecoRef?.current) {
-      currentRecoRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      })
+    if (!carouselRef.current) {
+      console.log('carouselref is empty')
+      return
     }
-  }, [currentSlide, childrenRefs])
+
+    // check if the carousel is currently in the viewport
+    // (this prevents scrolling down to the carousel when the page is first rendered)
+    const carouselPosition = carouselRef.current.getBoundingClientRect()
+
+    const isVisible = (
+      carouselPosition &&
+      carouselPosition.top >= 0 &&
+      carouselPosition.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    )
+
+    if (isVisible) {
+      // move the desired child into the center of the carousel
+      const currentRecoRef = childrenRefs[currentSlide]
+
+      if (currentRecoRef?.current) {
+        console.log('scrolling to child ', currentSlide)
+        setTimeout(() => {
+          return currentRecoRef.current.scrollIntoView({
+            // behavior: "smooth",
+            block: "center",
+            inline: "center"
+          })
+        }, 10)
+      } else {
+        console.log('child ref is empty')
+      }
+    } else {
+      const middle = Math.floor(carouselPosition.width * (Math.floor(lastInd / 2) - 1.25))
+      console.log('scroll to middle', middle)
+      carouselRef.current.scroll({ left: middle })
+    }
+  }, [carouselRef, currentSlide, childrenRefs, lastInd])
 
   const { prevText, nextText } = getButtonText(currentSlide, lastInd)
 
@@ -76,7 +105,7 @@ const Carousel = (props) => {
         </button>
       </div>
 
-      <ul className={styles.carousel}>
+      <ul className={styles.carousel} ref={carouselRef}>
         <CarouselCard empty />
 
         {props.recos.map((reco, ind) => (

@@ -1,24 +1,23 @@
 {
-  "number": 2,
+  "number": 3,
   "title": "Paintr",
   "slug": "/paintr",
-  "previous": "/react-firebase-starter",
-  "next": "/avocart",
+  "previous": "/starter",
   "descr": 
-    "Personal project: a web app that generates colour schemes for websites, applies them to a demo website and provides CSS code for the perfect colour scheme.",
+    "Personal project from 2021: a web app that generates colour schemes for websites, creates a preview from a demo website mockup, and provides CSS code for the perfect colour scheme.",
   "role": 
     "Idea, design and development",
-  "tags": ["React", "JavaScript", "HTML", "CSS"],
+  "tags": ["React", "JavaScript", "CSS", "Algorithms"],
   "urls": {
     "code": "https://github.com/dariatsvetkova/paintr",
-    "live": "https://www.paintr.io/"
+    "live": "https://dariatsvetkova.github.io/paintr/"
   },
   "why": 
-    "There are a lot of tools out there that generate colour palettes. But unless you have an eye for graphic design, it is not always obvious how to properly apply a colour palette to a website. This is why I created this tool. It combines a palette generator with a mockup of a generic web page to demonstrate which colours go where. It can be used by everyone, regardless of their experience with design or coding.",
+    "When working on personal projects, I kept running into the same problem: how do I pick good colours for the UI? There are a lot of tools out there that generate colour palettes. But unless you are a graphic design pro, it is not always obvious how to properly apply a colour palette to a website. Paintr solves this problem: it combines a palette generator with a mockup of a generic web page to demonstrate which colours go where. Everyone can use it regardless of their experience with design or coding.",
   "stack":
-    "React was an obvious choice for this project because it allows passing the generated colours as state to multiple components on the page. It also easily allows you to style all elements of the demo page within the component. A third-party library color-name-list was used to convert user input from colour names into hex values. The project was created with create-react-app and is hosted on Github Pages, allowing for live updates and testing via Github Actions.",
+    "React was an obvious choice for this project since it allowed me to easily share the generated colours with multiple UI components simultaneously. To convert user input from colour names into hex values, I used a third-party library, `color-name-list.` The project was created with create-react-app and is hosted on GitHub Pages, using its live updates and testing via GitHub Actions.",
   "challenges": 
-    "For this project, I decided to write a palette generator from scratch to fulfill the requirements specific for website colour schemes: unlike other colour palettes, they contain only two to three “colourful” colours, and the rest are neutral colours that balance them. Another complexity was enforcing the WCAG contrast requirements to ensure that the resulting colour schemes meet accessibility standards.",
+    "In this project, I had to fulfill the requirements specific to website colour schemes. First, to meet accessibility standards, all pairs of colours within the palette must comply with WCAG contrast requirements. Second, unlike other colour schemes, website designs contain only two to three “colourful” colours; the rest should be neutrals that create visual balance. To comply with these constraints, I wrote my own algorithm that generates palettes either completely randomly or based on primary colours specified by the user, tests them for accessibility, and provides all possible combinations of the generated colours that can be applied to a web design.",
   "lessons": 
-    "This project was a great practice in React core concepts and Hooks. I also took a deep dive into colour theory, different colour formats used on the web, and web design principles. Finally, I got to practise using version control, and learned about implementing a Github Actions workflow."
+    "This project made me take a deep dive into colour theory, learn about different colour formats used on the web, and study web design principles. It was also a great practice in core React concepts and some of its more obscure features (like using `ref` to access the previous value of a component’s props). Finally, I got to practise implementing efficient and creative algorithms in JavaScript."
 }

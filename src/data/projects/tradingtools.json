@@ -1,7 +1,7 @@
 {
-  "number": 5,
+  "number": 4,
   "title": "Trading Tools",
   "descr": 
     "I'm currently building an online risk calculator for active traders as a freelance project. Stay tuned for more info!",
-  "tags": ["React", "Redux", "TypeScript", "Styled Components"]
+  "tags": ["React", "TypeScript", "Jotai", "IndexedDB", "Tailwind"]
 }

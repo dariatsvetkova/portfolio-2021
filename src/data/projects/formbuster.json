@@ -1,0 +1,30 @@
+{
+  "number": 1,
+  "title": "FormBuster",
+  "slug": "/formbuster",
+  "next": "/starter",
+  "descr": 
+    "Built for CodeBusters in 2022: an internal framework for creating form-based workflows within minutes. Includes forms with multiple stakeholders, conditional logic, real-time calculations on the inputs, printable document generation, and more.",
+  "role": 
+    "Main contributor, in collaboration with ",
+  "team": [
+    {
+      "name": "Yumie Tsuzuki",
+      "link": "https://github.com/yumietzk"
+    },
+    {
+      "name": "Karida Chen",
+      "link": "https://github.com/piggy0713"
+    }
+  ],
+  "embed": "https://www.loom.com/embed/10a2c9d4c7584648955f77a479fadcda?sid=f0761130-6138-4ea0-86e5-9f1359c11e94",
+  "tags": ["NodeJS", "Google Cloud Functions", "React", "Formik", "Tailwind"],
+  "why": 
+    "My company took over an existing project with dozens of forms with hundreds of questions - all hard-coded! Every change, however small, had to be done manually, which took days or, sometimes, weeks. I found a way to replace repetitive code with flexible components and used a schema to describe each form and the connections between forms. That was the beginning of FormBuster. By implementing it in the original project, we refactored 39% of the codebase, removing 12,176 lines of code. The team then used FormBuster in 4 projects, ranging from LawTech to an investment tracking app.",
+  "stack":
+    "On the front end, we used Formik for its easy validation and access to form context and Tailwind for its sensible defaults that produce beautiful and accessible interfaces. The backend was built with NodeJS. Since the codebase was already connected to a Firebase project, we built our API endpoints with Google Cloud Functions. The original project used a costly third-party PDF generator to turn user input into printable, filled-out forms. I found a way to replace it with more flexible (and free) Handlebars templates, saving our client $12k in annual licensing fees.",
+  "challenges": 
+    "As the team started applying FormBuster to different projects, we needed to introduce additional functionality, including calculations with complex logic. We wanted to display calculation results to the user as they were inputting the numbers while also updating the database in a timely manner. This experience made me revisit the CAP theorem and look for the optimal balance between the persistence and performance of the FormBuster components.",
+  "lessons": 
+    "Creating a framework that the team could use across many unrelated apps taught me to write code with high abstraction. It pushed me to learn about design patterns and software architecture in general. Access to a previous, unsuccessful implementation of the original app also allowed me to study antipatterns and avoid making the same mistakes in my design."
+}

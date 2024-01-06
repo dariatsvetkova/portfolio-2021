@@ -48,10 +48,9 @@ const ProjectTemplate = ({ pageContext, data }) => {
                   {' '}
                   {project.team.map((mate, index) => {
                     return (
-                      <>
+                      <React.Fragment key={mate.link}>
                         {index > 0 && <span>, </span>}
-                        <a 
-                          key={`mate-${index}`}
+                        <a
                           className="textLink"
                           href={mate.link}
                           target="_blank"
@@ -59,7 +58,7 @@ const ProjectTemplate = ({ pageContext, data }) => {
                         >
                           {mate.name}
                         </a>
-                      </>
+                      </React.Fragment>
                     );
                   }
                   )}
@@ -76,29 +75,33 @@ const ProjectTemplate = ({ pageContext, data }) => {
             </div>
           </div>
           <div className={styles.column}>
-            <h2 className={styles.columnTitle}>Links</h2>
-            <p>
-              <a 
-                className="textLink" 
-                href={project.urls.code} 
-                target="_blank" 
-                rel="noreferrer"
-              >
-                View code
-              </a>
-            </p>
-            {project.urls.live && 
-              <p>
-                <a 
-                  className="textLink" 
-                  href={project.urls.live}
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                  View live
-                </a>
-              </p>
-            }
+            {project.urls && (
+              <>
+                <h2 className={styles.columnTitle}>Links</h2>
+                <p>
+                  <a 
+                    className="textLink" 
+                    href={project.urls.code} 
+                    target="_blank" 
+                    rel="noreferrer"
+                  >
+                    View code
+                  </a>
+                </p>
+                {project.urls.live && 
+                  <p>
+                    <a 
+                      className="textLink" 
+                      href={project.urls.live}
+                      target="_blank" 
+                      rel="noreferrer"
+                    >
+                      View live
+                    </a>
+                  </p>
+                }
+              </>
+            )}
           </div>
           {data.heroImg && 
             <GatsbyImage
