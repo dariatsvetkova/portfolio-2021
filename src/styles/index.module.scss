@@ -149,6 +149,19 @@
 .recos {
   background: $DT-light-grey;
   position: relative;
+
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: 1fr 80vw 1fr;
+    align-items: center;
+
+    h3 {
+      grid-row: 1/2;
+      grid-column: 1/4;
+    }
+  }
 }
 
 .projects {
