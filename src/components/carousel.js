@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React from "react"
 import { ArrowLeft, ArrowRight } from "../components/icons"
 import CarouselCard from "./carouselCard"
 import Slider from "react-slick"
@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css"
 import * as styles from "../styles/carousel.module.scss"
 
 const Carousel = (props) => {
-  const carouselRef = useRef(null)
+  const carouselRef = React.createRef()
   const recos = props.recos
 
   const carouselSettings = {
@@ -27,14 +27,14 @@ const Carousel = (props) => {
       <button
         className={styles.carouselButtonLeft}
         aria-label="Go to previous slide"
-        onClick={carouselRef?.current?.slickPrev}
+        onClick={() => carouselRef?.current?.slickPrev()}
       >
         <ArrowLeft />
       </button>
       <button
         className={styles.carouselButtonRight}
         aria-label="Go to next slide"
-        onClick={carouselRef?.current?.slickNext}
+        onClick={() => carouselRef?.current?.slickNext()}
       >
         <ArrowRight />
       </button>
