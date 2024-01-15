@@ -1,6 +1,22 @@
 [  
   {
     "from": {
+      "name": "Jeremy",
+      "relation": "teammate and mentee",
+      "company": "CodeBusters"
+    },
+    "text": "Daria's deep understanding of software design and clean modular code were instructive examples that continue to inform how I approach development work, and which set the standard for our team."
+  },
+  {
+    "from": {
+      "name": "Thom",
+      "relation": "CEO and Principal Engineer",
+      "company": "CodeBusters"
+    },
+    "text": "In technical discussions, Daria has a stunning ability to express her point of view respectfully and move the team towards a solution in a productive manner."
+  },
+  {
+    "from": {
       "name": "Lauren",
       "relation": "mentor",
       "company": "The Collab Lab"
@@ -13,31 +29,15 @@
       "relation": "CEO and Principal Engineer",
       "company": "CodeBusters"
     },
-    "text": "In technical discussions, Daria has a stunning ability to express her point of view respectfully and move the team towards a solution in a productive manner."
-  },
-  {
-    "from": {
-      "name": "Karan",
-      "relation": "teammate",
-      "company": "The Collab Lab"
-    },
-    "text": "While Daria's skills as a developer and ability to quickly pick up technical skills are clearly amazing, it's her ability to critically assess problems and present them in a succinct manner that sets her apart."
-  },
-  {
-    "from": {
-      "name": "Thom",
-      "relation": "CEO and Principal Engineer",
-      "company": "CodeBusters"
-    },
     "text": "Daria's diverse experience makes her an invaluable asset as a client-facing engineer capable of balancing sales, presentation skills and the ability to explain technical concepts in an accessible way."
   },
   {
     "from": {
-      "name": "Caitlin",
-      "relation": "teammate",
-      "company": "The Collab Lab"
+      "name": "Yumie",
+      "relation": "teammate and mentee",
+      "company": "CodeBusters"
     },
-    "text": "Whenever our team was in need of direction, Daria always stepped up to guide us toward our goals."
+    "text": "Daria has a profound understanding of the project, tools, and code, providing precise advice whenever I sought guidance from her. She consistently endeavours to organize and enhance the team's development experience, fostering collective growth."
   },
   {
     "from": {
@@ -49,11 +49,11 @@
   },
   {
     "from": {
-      "name": "Abigail",
+      "name": "Karan",
       "relation": "teammate",
       "company": "The Collab Lab"
     },
-    "text": "Daria's 'MVP' status of our group is a true testament to her outstanding work ethic and critical thinking."
+    "text": "While Daria's skills as a developer and ability to quickly pick up technical skills are clearly amazing, it's her ability to critically assess problems and present them in a succinct manner that sets her apart."
   },
   {
     "from": {
