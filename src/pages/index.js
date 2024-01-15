@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
             <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals. Currently, I am studying Computer Science at Toronto Metropolitan University.</p>
           </div>
           <div className={styles.articleRight}>
-            <p>My main professional interest is using technology to solve business problems. As a Full Stack Engineer, I specialize in backend development with NodeJS and Python and frontend development with React and Vue. I am also working on my skills in online privacy and secure handling of personal data.</p>
+            <p>My main professional interest is using technology to solve business problems. As a Full Stack Engineer, I specialize in backend development with NodeJS and Python and frontend development with React and other JavaScript frameworks. I am also working on my skills in online privacy and secure handling of personal data.</p>
             <p>Both at work and in my free time, I enjoy creativity in its various forms: programming, <a className="textLink" href="https://open.spotify.com/artist/4KtK51Svc4byjd4FGqroQy" target="_blank" rel="noreferrer">music</a>, fashion, and <a className="textLink" href="https://ko-fi.com/dariascananigans/posts" target="_blank" rel="noreferrer">creative writing</a>. You can also spot me at a local chess club, embarrassingly losing to 8-year-olds.</p>
           </div>
         </section>
