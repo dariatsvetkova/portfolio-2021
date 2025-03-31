@@ -16,17 +16,15 @@ const IndexPage = ({ data }) => {
     "@context": "https://schema.org/",
     "@type": "Person",
     "name": "Daria Tsvetkova",
-    "description": "Daria Tsvetkova is a software developer and musician based in Toronto, Canada.",
+    "description": "Daria Tsvetkova is a software engineer and artist based in Toronto, Canada.",
     "url": "https://dariatsvetkova.ca/",
     "image": "https://dariatsvetkova.ca/static/daria-tsvetkova-schema.jpg",
     "sameAs": [
-      "https://twitter.com/daria_tsss",
       "https://www.linkedin.com/in/daria-tsvetkova/",
+      "https://open.spotify.com/artist/4KtK51Svc4byjd4FGqroQy",
       "https://dariatsvetkova.ca",
-      "https://soundcloud.com/liuthsounds",
-      "https://www.instagram.com/liuth.sounds/"
     ],
-    "jobTitle": "Software Developer and Musician"
+    "jobTitle": "Software Engineer"
   }
 
   return (
@@ -68,7 +66,7 @@ const IndexPage = ({ data }) => {
           <h3>About Me</h3>
           <div className={styles.articleLeft}>
             <p>In {new Date().getFullYear() - 2011} years of my professional life, I have gone from analyzing marketing data for a pharmaceutical corporation to managing well-known brands, creating digital strategies and tools and finally, building software.</p>
-            <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals. Currently, I am studying Computer Science at Toronto Metropolitan University.</p>
+            <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals. Most recently, I completed a Computer Science certificate at Toronto Metropolitan University.</p>
           </div>
           <div className={styles.articleRight}>
             <p>My main professional interest is using technology to solve business problems. As a Full Stack Engineer, I specialize in backend development with NodeJS and Python and frontend development with React and other JavaScript frameworks. I am also working on my skills in online privacy and secure handling of personal data.</p>

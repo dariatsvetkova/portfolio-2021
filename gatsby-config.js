@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Daria Tsvetkova \/\/ Software Engineer`,
-    description: `Daria Tsvetkova is a software engineer and musician based in Toronto, Canada. Learn more about her experience, skills and projects.`,
+    description: `Daria Tsvetkova is a software engineer and artist based in Toronto, Canada. Learn more about her experience, skills and projects.`,
     url: "https://dariatsvetkova.ca",
     author: "Daria Tsvetkova",
     ogImage: "https://dariatsvetkova.ca/daria-tsvetkova-og.png",
