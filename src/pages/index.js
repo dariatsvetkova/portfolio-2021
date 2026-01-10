@@ -65,11 +65,11 @@ const IndexPage = ({ data }) => {
         <section className={`${styles.sectionHome} ${styles.about}`}>
           <h3>About Me</h3>
           <div className={styles.articleLeft}>
-            <p>In {new Date().getFullYear() - 2011} years of my professional life, I have gone from analyzing marketing data for a pharmaceutical corporation to managing well-known brands, creating digital strategies and tools and finally, building software.</p>
-            <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals. Most recently, I completed a Computer Science certificate at Toronto Metropolitan University.</p>
+            <p>In {new Date().getFullYear() - 2011} years of my professional life, I have gone from analyzing data for a pharmaceutical corporation to managing well-known brands and creating digital strategies to building software.</p>
+            <p>My education started with a degree in Chemistry; it opened opportunities in various industries that required strong analytical skills. In the following years, I pursued continuing education to support my evolving career goals, including Computer Science at Toronto Metropolitan University.</p>
           </div>
           <div className={styles.articleRight}>
-            <p>My main professional interest is using technology to solve business problems. As a Full Stack Engineer, I specialize in backend development with NodeJS and Python and frontend development with React and other JavaScript frameworks. I am also working on my skills in online privacy and secure handling of personal data.</p>
+            <p>My main professional interest is using technology to solve business problems. As a Full Stack Engineer, I specialize in backend development with Python and NodeJS and frontend development with React and other JavaScript frameworks. I am a privacy enthusiast and a Certified Information Privacy Professional (CIPP/E).</p>
             <p>Both at work and in my free time, I enjoy creativity in its various forms: programming, <a className="textLink" href="https://open.spotify.com/artist/4KtK51Svc4byjd4FGqroQy" target="_blank" rel="noreferrer">music</a>, fashion, and <a className="textLink" href="https://ko-fi.com/dariascananigans/posts" target="_blank" rel="noreferrer">creative writing</a>. You can also spot me at a local chess club, embarrassingly losing to 8-year-olds.</p>
           </div>
         </section>
