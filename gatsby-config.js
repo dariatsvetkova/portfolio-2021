@@ -10,25 +10,6 @@ module.exports = {
       {
         name: "Home",
         link: "/",
-        subnav: [],
-      },
-      {
-        name: "Projects",
-        link: "/#projects",
-        subnav: [
-          {
-            name: "FormBuster",
-            link: "/formbuster",
-          },
-          {
-            name: "React Firebase Starter",
-            link: "/starter",
-          },
-          {
-            name: "Paintr",
-            link: "/paintr",
-          },
-        ]
       },
     ],
   },
@@ -61,8 +42,8 @@ module.exports = {
       options: {
         cssLoaderOptions: {
           modules: {
-            exportLocalsConvention: 'camelCaseOnly'
-          }
+            exportLocalsConvention: "camelCaseOnly",
+          },
         },
       },
     },

@@ -12,8 +12,6 @@ footer {
 
   @include mobile {
     padding: 30px;
-    justify-content: center;
-    align-items: flex-start;
   }
 
   small {
@@ -23,17 +21,17 @@ footer {
     @include mobile {
       position: static;
       margin-top: 6vw;
-    } 
+    }
   }
 }
 
 .footerH3 {
   margin: 0 0 0.5em 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: normal;
   font-weight: 600;
   font-size: 2.618em;
-  line-height: 140%;  
+  line-height: 140%;
 
   @include mobile {
     font-size: 2.25em;
@@ -45,47 +43,9 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   align-items: stretch;
-
-  @include tablet {
-    justify-content: space-between;
-  }
-
-  @include mobile {
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .footerLeft,
-  .footerRight {
-    flex: 0 1 260px;
-
-    @include mobile {
-      flex: 0 1 auto;
-      max-width: 260px;
-    }
-  }
+  text-align: center;
 
   .footerLeft {
-    @include mobile {
-      p:last-of-type {
-        margin-bottom: 1em;
-      }
-    }
-  }
-
-  .footerLine {
-    width: 1px;
-    height: 100%;
-    border-right: 1px solid $DT-black;
-    margin: 0 8.82em;
-
-    @include tablet {
-      margin: 0 1em;
-    }
-
-    @include mobile {
-      display: none;
-    }
+    flex: 0 1 260px;
   }
 }
